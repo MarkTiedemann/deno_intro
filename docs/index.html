@@ -301,6 +301,20 @@ built with V8, Rust, and Tokio
 </main>
 <main id="s24" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;Feature&nbsp;-&nbsp;Modules</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;No&nbsp;`<span style="color:lightgreen">require</span>`&nbsp;function.</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;ES&nbsp;modules&nbsp;work&nbsp;out&nbsp;of&nbsp;the&nbsp;box.</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;For&nbsp;example:</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;hello.ts</p>
+<p class=code>&nbsp;&nbsp;<span style="color:coral">export</span>&nbsp;function&nbsp;<span style="color:lightgreen">hello</span>(name:&nbsp;<span style="color:lightblue">string</span>)&nbsp;{</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.<span style="color:lightgreen">log</span>(<span style="color:khaki">`Hello,&nbsp;</span><span style="color:coral">${</span>name<span style="color:coral">}</span><span style="color:khaki">!`</span>);</p>
+<p class=code>&nbsp;&nbsp;}</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;world.ts</p>
+<p class=code>&nbsp;&nbsp;<span style="color:coral">import</span>&nbsp;{&nbsp;hello&nbsp;}&nbsp;<span style="color:coral">from</span>&nbsp;<span style="color:khaki">"./hello.ts"</span>;</p>
+<p class=code>&nbsp;&nbsp;<span style="color:lightgreen">hello</span>(<span style="color:khaki">"World"</span>);</p>
 </main>
 <main id="s25" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;Feature&nbsp;-&nbsp;Package&nbsp;Management</p>
