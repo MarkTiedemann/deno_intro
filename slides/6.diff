@@ -12,5 +12,4 @@ $ diff node deno
 - 2009       / C++
 + 2018       / Rust
 /
-/ // --> Memory safety, type inference,
-/ // immutability, pattern matching, etc.
+/ // --> Safer, more modern development
