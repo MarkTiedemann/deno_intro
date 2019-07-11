@@ -3,4 +3,7 @@ $ diff node deno
 | Runtime for:
 - JavaScript
 + JavaScript and TypeScript
-/ // compiler built-in ^
+|
+/ // - TS compiler is built-in!
+/ //   (No need to run `tsc`.)
+/ // - Compilation AOT or JIT.

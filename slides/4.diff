@@ -7,3 +7,7 @@ $ diff node deno
 | Main goal:
 -        evented I/O
 + secure evented I/O
+|
+/ // - Focus on performance and security.
+/ // - Deno's I/O performance is close to
+/ //   Node's already.

@@ -1,0 +1,13 @@
+# # Feature - Promises
+|
+| - <u>Fun Fact</u>: Node adopted Promises in 2009,
+|   but removed them in 2010
+|
+| - Deno's API's are built for <span\wstyle="color:coral">asnyc/await</span>,
+|   for example:
+|
+|   <span\wstyle="color:lightgreen">readFile</span>(name: <span\wstyle="color:lightblue">string</span>): Promise&lt;<span\wstyle="color:lightblue">Uint8Array</span>&gt;
+|
+|
+/ // API Reference:
+/ // <a\whref="https://deno.land/typedoc/index.html">deno.land/typedoc/index.html</a>

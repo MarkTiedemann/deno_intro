@@ -4,4 +4,4 @@ $ join node deno
 # Ryan Dahl
 |
 | Engine:
-# V8 <span\wstyle="color:grey">// <-- Chrome</span>
+# V8 <span\wstyle="color:grey">// <-- Used in Chrome</span>

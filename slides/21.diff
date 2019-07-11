@@ -1,4 +1,4 @@
-# # Security - In Practice
+# # Security
 |
 $ deno examples/read_file.ts
 |

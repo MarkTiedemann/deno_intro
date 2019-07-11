@@ -11,5 +11,6 @@ $ diff node deno
 | Created in / Developed in:
 - 2009       / C++
 + 2018       / Rust
-/ // --> memory safety, type inference,
+/
+/ // --> Memory safety, type inference,
 / // immutability, pattern matching, etc.
