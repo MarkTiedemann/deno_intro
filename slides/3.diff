@@ -6,4 +6,4 @@ $ diff node deno
 |
 / // - TS compiler is built-in!
 / //   (No need to run `tsc`.)
-/ // - Compilation AOT or JIT.
+/ // - TS compilation AOT or JIT.

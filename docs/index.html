@@ -4,7 +4,7 @@
 <link href="index.css" rel="stylesheet" />
 <script src="index.js"></script>
 <script>
-window.lastSlide = 29;
+window.lastSlide = 30;
 </script>
 <main id="s0" style="display: none">
 <p class=file>>&nbsp;README.md</p>
@@ -49,7 +49,7 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;</p>
 <p class=grey>&nbsp;&nbsp;//&nbsp;-&nbsp;TS&nbsp;compiler&nbsp;is&nbsp;built-in!</p>
 <p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;(No&nbsp;need&nbsp;to&nbsp;run&nbsp;`tsc`.)</p>
-<p class=grey>&nbsp;&nbsp;//&nbsp;-&nbsp;Compilation&nbsp;AOT&nbsp;or&nbsp;JIT.</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;-&nbsp;TS&nbsp;compilation&nbsp;AOT&nbsp;or&nbsp;JIT.</p>
 </main>
 <main id="s4" style="display: none">
 <p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
@@ -319,24 +319,31 @@ built with V8, Rust, and Tokio
 <main id="s25" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;Feature&nbsp;-&nbsp;Package&nbsp;Management</p>
 <p class=code>&nbsp;</p>
-<p class=code>&nbsp;&nbsp;-&nbsp;No&nbsp;NPM&nbsp;needed.</p>
-<p class=code>&nbsp;&nbsp;-&nbsp;Import&nbsp;scripts&nbsp;from&nbsp;URLs&nbsp;-&nbsp;like&nbsp;a&nbsp;browser!</p>
-<p class=code>&nbsp;&nbsp;-&nbsp;Import&nbsp;maps&nbsp;are&nbsp;supported.</p>
-<p class=code>&nbsp;&nbsp;-&nbsp;No&nbsp;subresource&nbsp;integrity&nbsp;yet.</p>
-<p class=code>&nbsp;&nbsp;-&nbsp;Standard&nbsp;library&nbsp;available:</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;No&nbsp;NPM,&nbsp;no&nbsp;`<span style="color:khaki">node_modules</span>`,&nbsp;no&nbsp;<span style="color:khaki">`index.js`</span>.</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;Import&nbsp;modules&nbsp;from&nbsp;URLs&nbsp;-&nbsp;like&nbsp;a&nbsp;browser!</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;Modules&nbsp;are&nbsp;cached&nbsp;in&nbsp;`<span style="color:khaki">$DENO_DIR</span>`.</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;Import&nbsp;maps&nbsp;are&nbsp;supported.&nbsp;No&nbsp;SRI&nbsp;yet.</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;Standard&nbsp;library:</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;<span style="color:coral">import</span>&nbsp;*&nbsp;<span style="color:coral">as</span>&nbsp;fs&nbsp;<span style="color:coral">from</span>&nbsp;<span style="color:khaki">"https://deno.land/</span></p>
 <p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:khaki">std@v0.11.0/fs/mod.ts"</span>;</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;-&nbsp;Registry&nbsp;with&nbsp;userland&nbsp;modules:</p>
 <p class=code>&nbsp;</p>
-<p class=code>&nbsp;&nbsp;<span style="color:coral">import</span>&nbsp;*&nbsp;<span style="color:coral">as</span>&nbsp;pg&nbsp;<span style="color:coral">from</span>&nbsp;<span style="color:khaki">"https://deno.land/x/</span></p>
-<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:khaki">postgres@v0.2.0/mod.ts"</span>;</p>
+<p class=code>&nbsp;&nbsp;<span style="color:coral">import</span>&nbsp;*&nbsp;<span style="color:coral">as</span>&nbsp;pg&nbsp;<span style="color:coral">from</span>&nbsp;<span style="color:khaki">"https://deno.land/</span></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:khaki">x/postgres@v0.2.0/mod.ts"</span>;</p>
 </main>
 <main id="s26" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;Feature&nbsp;-&nbsp;Web&nbsp;Compatibility</p>
 </main>
 <main id="s27" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Feature&nbsp;-&nbsp;Misc</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;<span style="color:khaki">`deno&nbsp;fmt`</span>:&nbsp;Format&nbsp;code&nbsp;consistently</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;<span style="color:khaki">`deno&nbsp;bundle`</span>:&nbsp;Bundle&nbsp;code&nbsp;as&nbsp;single&nbsp;file</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;<span style="color:khaki">`deno&nbsp;info`</span>:&nbsp;Show&nbsp;module&nbsp;dependency&nbsp;tree</p>
+</main>
+<main id="s28" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;Getting&nbsp;Started</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;-&nbsp;Visit&nbsp;the&nbsp;website:&nbsp;<a href="https://deno.land/">deno.land</a></p>
@@ -350,7 +357,7 @@ built with V8, Rust, and Tokio
 <p class=shell>$&nbsp;deno&nbsp;https://deno.land/welcome.ts</p>
 <p class=grey>&nbsp;&nbsp;Welcome&nbsp;to&nbsp;Deno&nbsp;🦕</p>
 </main>
-<main id="s28" style="display: none">
+<main id="s29" style="display: none">
 <p class=comment>&nbsp;&nbsp;#&nbsp;References</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">10&nbsp;Things&nbsp;I&nbsp;Regret&nbsp;About&nbsp;Node.js</a></p>
@@ -359,7 +366,7 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">Deno,&nbsp;a&nbsp;new&nbsp;way&nbsp;to&nbsp;JavaScript</a></p>
 <p class=grey>&nbsp;&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JS&nbsp;Fest&nbsp;2019</p>
 </main>
-<main id="s29" style="display: none"><div
+<main id="s30" style="display: none"><div
 style="display: flex; flex-direction: column; height: 50vh; justify-content: center; align-items: center;"
 >
 <div style="font-size: 200%;">THE END;</div>
