@@ -1,13 +1,15 @@
-# # Feature - Promises
+# # Feature - Modules
 |
-| - <u>Fun Fact</u>: Node adopted Promises in 2009,
-|   but removed them in 2010
+| - No `<span\wstyle="color:lightgreen">require</span>` function.
+| - ES modules work out of the box.
 |
-| - Deno's API's are built for <span\wstyle="color:coral">asnyc/await</span>,
-|   for example:
+/ // For example:
 |
-|   <span\wstyle="color:lightgreen">readFile</span>(name: <span\wstyle="color:lightblue">string</span>): Promise&lt;<span\wstyle="color:lightblue">Uint8Array</span>&gt;
+/ // in hello.ts
+| <span\wstyle="color:coral">export</span> function <span\wstyle="color:lightgreen">hello</span>(name: <span\wstyle="color:lightblue">string</span>) {
+|     console.<span\wstyle="color:lightgreen">log</span>(<span\wstyle="color:khaki">`Hello, </span><span\wstyle="color:coral">${</span>name<span\wstyle="color:coral">}</span><span\wstyle="color:khaki">!`</span>);
+| }
 |
-|
-/ // API Reference:
-/ // <a\whref="https://deno.land/typedoc/index.html">deno.land/typedoc/index.html</a>
+/ // in world.ts
+| <span\wstyle="color:coral">import</span> { hello } <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"./hello.ts"</span>;
+| <span\wstyle="color:lightgreen">hello</span>(<span\wstyle="color:khaki">"World"</span>);

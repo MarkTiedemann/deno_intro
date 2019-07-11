@@ -1,5 +1,12 @@
-# # Feature - Misc
+# # Getting Started
 |
-| - <span\wstyle="color:khaki">`deno fmt`</span>: Format code consistently
-| - <span\wstyle="color:khaki">`deno bundle`</span>: Bundle code as single file
-| - <span\wstyle="color:khaki">`deno info`</span>: Show module dependency tree
+| - Visit the website: <a\whref="https://deno.land/">deno.land</a>
+| - Install Deno:
+|
+$ brew install deno   <span\wstyle="color:grey"># On MacOS</span>
+$ scoop install deno  <span\wstyle="color:grey"># On Windows</span>
+|
+| - Run your first script:
+|
+$ deno https://deno.land/welcome.ts
+/ Welcome to Deno 🦕

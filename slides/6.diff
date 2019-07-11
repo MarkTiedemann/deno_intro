@@ -1,10 +1,10 @@
-$ diff node deno
+# # Differences
 |
 | Runtime for:
 - JavaScript
 + JavaScript and TypeScript
 |
-| Main goal:
+| Main focus on:
 -        evented I/O
 + secure evented I/O
 |

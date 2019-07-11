@@ -1,7 +1,12 @@
 # # Security
 |
-$ deno examples/read_file.ts
+| - To avoid permission prompts,
+|   you can use command-line flags
 |
-/ // ...
-|
-- error: Uncaught PermissionDenied
+/ // For example:
+/
+|    --allow-read
+/    // allow all files to be read
+/
+|    --allow-read=$dir
+/    // allow reading files in $dir

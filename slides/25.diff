@@ -1,15 +1,12 @@
-# # Feature - Package Management
+# # Feature - Web Compatibility
 |
-| - No NPM, no `<span\wstyle="color:khaki">node_modules</span>`, no <span\wstyle="color:khaki">`index.js`</span>.
-| - Import modules from URLs - like a browser!
-| - Modules are cached in `<span\wstyle="color:khaki">$DENO_DIR</span>`.
-| - Import maps are supported. No SRI yet.
-| - Standard library:
+/ <i>"The subset of Deno programs which are</i>
+/ <i> written completely in JavaScript and do</i>
+/ <i> not use the global `Deno` namespace, ought</i>
+/ <i> to also be able to be run in a modern web</i>
+/ <i> browser without change."</i>
+/      <i>-- Deno Manual</i>
 |
-| <span\wstyle="color:coral">import</span> * <span\wstyle="color:coral">as</span> fs <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"https://deno.land/</span>
-|     <span\wstyle="color:khaki">std@v0.11.0/fs/mod.ts"</span>;
-|
-| - Registry with userland modules:
-|
-| <span\wstyle="color:coral">import</span> * <span\wstyle="color:coral">as</span> pg <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"https://deno.land/</span>
-|     <span\wstyle="color:khaki">x/postgres@v0.2.0/mod.ts"</span>;
+| - Unlike in Node, `window` is defined.
+| - For example, `<span\wstyle="color:lightgreen">fetch</span>` just works!
+| - Compatibility is WIP, see: <a\whref="https://deno.dev/wpt/">deno.dev/wpt</a>

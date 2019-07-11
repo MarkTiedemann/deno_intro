@@ -1,12 +1,5 @@
-# # Feature - Web Compatibility
+# # Feature - Misc
 |
-/ <i>"The subset of Deno programs which are</i>
-/ <i> written completely in JavaScript and do</i>
-/ <i> not use the global `Deno` namespace, ought</i>
-/ <i> to also be able to be run in a modern web</i>
-/ <i> browser without change."</i>
-/      <i>-- Deno Manual</i>
-|
-| - Unlike in Node, `window` is defined.
-| - For example, `<span\wstyle="color:lightgreen">fetch</span>` just works!
-| - Compatibility is WIP, see: <a\whref="https://deno.dev/wpt/">deno.dev/wpt</a>
+| - <span\wstyle="color:khaki">`deno fmt`</span>: Format code consistently
+| - <span\wstyle="color:khaki">`deno bundle`</span>: Bundle code as single file
+| - <span\wstyle="color:khaki">`deno info`</span>: Show module dependency tree
