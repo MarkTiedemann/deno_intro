@@ -1,1 +1,15 @@
 # # Feature - Package Management
+|
+| - No NPM needed.
+| - Import scripts from URLs - like a browser!
+| - Import maps are supported.
+| - No subresource integrity yet.
+| - Standard library available:
+|
+| <span\wstyle="color:coral">import</span> * <span\wstyle="color:coral">as</span> fs <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"https://deno.land/</span>
+|     <span\wstyle="color:khaki">std@v0.11.0/fs/mod.ts"</span>;
+|
+| - Registry with userland modules:
+|
+| <span\wstyle="color:coral">import</span> * <span\wstyle="color:coral">as</span> pg <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"https://deno.land/x/</span>
+|     <span\wstyle="color:khaki">postgres@v0.2.0/mod.ts"</span>;

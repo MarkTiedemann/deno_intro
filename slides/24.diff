@@ -5,11 +5,11 @@
 |
 / // For example:
 |
-/ // hello.ts
+/ // in hello.ts
 | <span\wstyle="color:coral">export</span> function <span\wstyle="color:lightgreen">hello</span>(name: <span\wstyle="color:lightblue">string</span>) {
 |     console.<span\wstyle="color:lightgreen">log</span>(<span\wstyle="color:khaki">`Hello, </span><span\wstyle="color:coral">${</span>name<span\wstyle="color:coral">}</span><span\wstyle="color:khaki">!`</span>);
 | }
 |
-/ // world.ts
+/ // in world.ts
 | <span\wstyle="color:coral">import</span> { hello } <span\wstyle="color:coral">from</span> <span\wstyle="color:khaki">"./hello.ts"</span>;
 | <span\wstyle="color:lightgreen">hello</span>(<span\wstyle="color:khaki">"World"</span>);
