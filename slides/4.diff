@@ -1,0 +1,9 @@
+$ diff node deno
+|
+| Runtime for:
+- JavaScript
++ JavaScript and TypeScript
+|
+| Main goal:
+-        evented I/O
++ secure evented I/O

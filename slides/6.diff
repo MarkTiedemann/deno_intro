@@ -1,0 +1,15 @@
+$ diff node deno
+|
+| Runtime for:
+- JavaScript
++ JavaScript and TypeScript
+|
+| Main goal:
+-        evented I/O
++ secure evented I/O
+|
+| Created in / Developed in:
+- 2009       / C++
++ 2018       / Rust
+| <span\wstyle="color:grey">// --> mem. safety, type inf., immutability,</span>
+| <span\wstyle="color:grey">// alg. data types, pattern matching, etc.</span>

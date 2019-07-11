@@ -1,0 +1,10 @@
+| 🔥 <a\whref="https://www.thoughtworks.com/radar/platforms">ThoughtWorks Technology Radar</a>
+|
+| # Recommendations:
+|
+|   <span\wstyle="color:crimson">HOLD</span>   > <i>"I wish you <u>wouldn't use</u> this tech."</i>
+|   <span\wstyle="color:orange">ASSESS</span> > <i>"I wish you <u>could use</u> this tech."</i>
+|   <span\wstyle="color:yellow">TRIAL</span>  > <i>"You <u>should try</u> this tech!"</i>
+|   <span\wstyle="color:springgreen">ADOPT</span>  > <i>"You <u>should use</u> this tech!"</i>
+|
+|   --> Deno currently ranked as <span\wstyle="color:orange">ASSESS</span>.

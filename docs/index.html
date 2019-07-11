@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>deno_intro</title>
+<link href="index.css" rel="stylesheet" />
+<script src="index.js"></script>
+<script>
+window.lastSlide = 15;
+</script>
+<main id="s0" style="display: none">
+<p class=file>>&nbsp;README.md</p>
+<p class=code>&nbsp;</p>
+<p class=comment>&nbsp;&nbsp;#&nbsp;deno_intro</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;|&nbsp;From&nbsp;Node&nbsp;to&nbsp;Deno.</p>
+<p class=code>&nbsp;</p>
+<p class=comment>&nbsp;&nbsp;>&nbsp;<span style="color:white">Slides:</span>&nbsp;<a href="https://marksweb.site/deno_intro">marksweb.site/deno_intro</a></p>
+<p class=comment>&nbsp;&nbsp;>&nbsp;<span style="color:white">Source:</span>&nbsp;<a href="https://github.com/marktiedemann/deno_intro">github.com/marktiedemann/deno_intro</a></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;<i>Made&nbsp;with&nbsp;❤️,&nbsp;rendered&nbsp;by&nbsp;🦕.</i></p>
+</main>
+<main id="s1" style="display: none"><header>
+<img src="node_logo.png" />
+<div>
+<h1>Node</h1>
+<span>
+A JavaScript runtime for evented I/O<br />
+built with V8, C++, and libuv
+</span>
+</div>
+</header>
+</main>
+<main id="s2" style="display: none"><header>
+<img src="deno_logo.svg" />
+<div>
+<h1>Deno</h1>
+<span>
+A secure JavaScript and TypeScript runtime<br />
+built with V8, Rust, and Tokio
+</span>
+</div>
+</header>
+</main>
+<main id="s3" style="display: none">
+<p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
+<p class=rm>-&nbsp;JavaScript</p>
+<p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;compiler&nbsp;built-in&nbsp;^</span></p>
+</main>
+<main id="s4" style="display: none">
+<p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
+<p class=rm>-&nbsp;JavaScript</p>
+<p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Main&nbsp;goal:</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evented&nbsp;I/O</p>
+<p class=add>+&nbsp;secure&nbsp;evented&nbsp;I/O</p>
+</main>
+<main id="s5" style="display: none">
+<p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
+<p class=rm>-&nbsp;JavaScript</p>
+<p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Main&nbsp;goal:</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evented&nbsp;I/O</p>
+<p class=add>+&nbsp;secure&nbsp;evented&nbsp;I/O</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Created&nbsp;in:</p>
+<p class=rm>-&nbsp;2009&nbsp;<span style="color:grey">//&nbsp;Happy&nbsp;10th&nbsp;birthday!&nbsp;^_^)/</span></p>
+<p class=add>+&nbsp;2018&nbsp;<span style="color:grey">//&nbsp;v1&nbsp;in&nbsp;Summer&nbsp;2019?</span></p>
+</main>
+<main id="s6" style="display: none">
+<p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
+<p class=rm>-&nbsp;JavaScript</p>
+<p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Main&nbsp;goal:</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evented&nbsp;I/O</p>
+<p class=add>+&nbsp;secure&nbsp;evented&nbsp;I/O</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Created&nbsp;in&nbsp;/&nbsp;Developed&nbsp;in:</p>
+<p class=rm>-&nbsp;2009&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;C++</p>
+<p class=add>+&nbsp;2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Rust</p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;-->&nbsp;mem.&nbsp;safety,&nbsp;type&nbsp;inf.,&nbsp;immutability,</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;alg.&nbsp;data&nbsp;types,&nbsp;pattern&nbsp;matching,&nbsp;etc.</span></p>
+</main>
+<main id="s7" style="display: none">
+<p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
+<p class=rm>-&nbsp;JavaScript</p>
+<p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Main&nbsp;goal:</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evented&nbsp;I/O</p>
+<p class=add>+&nbsp;secure&nbsp;evented&nbsp;I/O</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Created&nbsp;in&nbsp;/&nbsp;Developed&nbsp;in&nbsp;/&nbsp;Event&nbsp;loop:</p>
+<p class=rm>-&nbsp;2009&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;libuv</p>
+<p class=add>+&nbsp;2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Rust&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Tokio</p>
+</main>
+<main id="s8" style="display: none">
+<p class=shell>$&nbsp;join&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Created&nbsp;by:</p>
+<p class=comment>&nbsp;&nbsp;Ryan&nbsp;Dahl</p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;^&nbsp;Left&nbsp;Node&nbsp;in&nbsp;2012&nbsp;because</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;&nbsp;&nbsp;it&nbsp;was&nbsp;"finished"...</span></p>
+</main>
+<main id="s9" style="display: none">
+<p class=shell>$&nbsp;join&nbsp;node&nbsp;deno</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Created&nbsp;by:</p>
+<p class=comment>&nbsp;&nbsp;Ryan&nbsp;Dahl</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;Engine:</p>
+<p class=comment>&nbsp;&nbsp;V8&nbsp;<span style="color:grey">//&nbsp;<--&nbsp;Chrome</span></p>
+</main>
+<main id="s10" style="display: none">
+<p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">/*</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Published&nbsp;every&nbsp;6&nbsp;months</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Shows&nbsp;current&nbsp;trends&nbsp;in&nbsp;tech</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Gives&nbsp;recommendations&nbsp;on&nbsp;adoption</span></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></p>
+</main>
+<main id="s11" style="display: none">
+<p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;#&nbsp;Recommendations:</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:crimson">HOLD</span>&nbsp;&nbsp;&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>wouldn't&nbsp;use</u>&nbsp;this&nbsp;tech."</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:orange">ASSESS</span>&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>could&nbsp;use</u>&nbsp;this&nbsp;tech."</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:yellow">TRIAL</span>&nbsp;&nbsp;>&nbsp;<i>"You&nbsp;<u>should&nbsp;try</u>&nbsp;this&nbsp;tech!"</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:springgreen">ADOPT</span>&nbsp;&nbsp;>&nbsp;<i>"You&nbsp;<u>should&nbsp;use</u>&nbsp;this&nbsp;tech!"</i></p>
+</main>
+<main id="s12" style="display: none">
+<p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;#&nbsp;Recommendations:</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:crimson">HOLD</span>&nbsp;&nbsp;&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>wouldn't&nbsp;use</u>&nbsp;this&nbsp;tech."</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:orange">ASSESS</span>&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>could&nbsp;use</u>&nbsp;this&nbsp;tech."</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:yellow">TRIAL</span>&nbsp;&nbsp;>&nbsp;<i>"You&nbsp;<u>should&nbsp;try</u>&nbsp;this&nbsp;tech!"</i></p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:springgreen">ADOPT</span>&nbsp;&nbsp;>&nbsp;<i>"You&nbsp;<u>should&nbsp;use</u>&nbsp;this&nbsp;tech!"</i></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;-->&nbsp;Deno&nbsp;currently&nbsp;ranked&nbsp;as&nbsp;<span style="color:orange">ASSESS</span>.</p>
+</main>
+<main id="s13" style="display: none">
+<p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;<i>>&nbsp;"If&nbsp;you&nbsp;decide&nbsp;to&nbsp;use&nbsp;JavaScript</i></p>
+<p class=code>&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;or&nbsp;TypeScript&nbsp;on&nbsp;the&nbsp;server,</i></p>
+<p class=code>&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;have&nbsp;a&nbsp;look&nbsp;at&nbsp;Deno."</i></p>
+</main>
+<main id="s14" style="display: none">
+<p class=file>>&nbsp;References</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">10&nbsp;Things&nbsp;I&nbsp;Regret&nbsp;About&nbsp;Node.js</a></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JSConf&nbsp;EU&nbsp;2018</span></p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">Deno,&nbsp;a&nbsp;new&nbsp;way&nbsp;to&nbsp;JavaScript</a></p>
+<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JS&nbsp;Fest&nbsp;2019</span></p>
+</main>
+<main id="s15" style="display: none"><div
+style="display: flex; flex-direction: column; height: 50vh; justify-content: center; align-items: center;"
+>
+<div style="font-size: 200%;">THE END;</div>
+</div>
+</main>

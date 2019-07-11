@@ -1,0 +1,13 @@
+$ diff node deno
+|
+| Runtime for:
+- JavaScript
++ JavaScript and TypeScript
+|
+| Main goal:
+-        evented I/O
++ secure evented I/O
+|
+| Created in / Developed in / Event loop:
+- 2009       / C++          / libuv
++ 2018       / Rust         / Tokio

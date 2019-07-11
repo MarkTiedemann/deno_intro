@@ -1,0 +1,6 @@
+$ diff node deno
+|
+| Runtime for:
+- JavaScript
++ JavaScript and TypeScript
+| <span\wstyle="color:grey">// compiler built-in ^</span>

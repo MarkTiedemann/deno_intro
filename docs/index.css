@@ -1,0 +1,98 @@
+html {
+  color: white;
+}
+
+body {
+  color: white;
+  background: black;
+  font-family: monospace;
+  font-size: 210%;
+  padding: 90px 120px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  font-size: 150%;
+}
+
+#s1,
+#s2 {
+  font-size: 100%;
+  color: black;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+#s1 header,
+#s2 header {
+  height: 100%;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#s1 img {
+  height: 200px;
+  margin-right: 40px;
+}
+
+#s2 img {
+  width: 250px;
+  margin-right: 15px;
+}
+
+#s1 h1,
+#s2 h1 {
+  margin: 0 0 10px -4px;
+}
+
+#s1 span,
+#s2 span {
+  line-height: 115%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: dodgerblue;
+}
+
+.error {
+  color: crimson;
+}
+
+p {
+  margin: 3px;
+}
+
+.file {
+  color: fuchsia;
+}
+
+.shell {
+  color: orange;
+}
+
+.code {
+  color: white;
+}
+
+.comment {
+  color: dodgerblue;
+}
+
+.add {
+  color: springgreen;
+}
+
+.rm {
+  color: crimson;
+}
