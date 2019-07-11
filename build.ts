@@ -118,6 +118,8 @@ function Line(text: string) {
       return Paragraph("add", text);
     case "-":
       return Paragraph("rm", text);
+    case "/":
+      return Paragraph("grey", ` ${text.slice(1)}`);
   }
 }
 

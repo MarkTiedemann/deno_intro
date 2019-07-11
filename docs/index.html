@@ -4,7 +4,7 @@
 <link href="index.css" rel="stylesheet" />
 <script src="index.js"></script>
 <script>
-window.lastSlide = 15;
+window.lastSlide = 25;
 </script>
 <main id="s0" style="display: none">
 <p class=file>>&nbsp;README.md</p>
@@ -46,7 +46,7 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;&nbsp;Runtime&nbsp;for:</p>
 <p class=rm>-&nbsp;JavaScript</p>
 <p class=add>+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;compiler&nbsp;built-in&nbsp;^</span></p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;compiler&nbsp;built-in&nbsp;^</p>
 </main>
 <main id="s4" style="display: none">
 <p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
@@ -88,8 +88,8 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;&nbsp;Created&nbsp;in&nbsp;/&nbsp;Developed&nbsp;in:</p>
 <p class=rm>-&nbsp;2009&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;C++</p>
 <p class=add>+&nbsp;2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Rust</p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;-->&nbsp;mem.&nbsp;safety,&nbsp;type&nbsp;inf.,&nbsp;immutability,</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;alg.&nbsp;data&nbsp;types,&nbsp;pattern&nbsp;matching,&nbsp;etc.</span></p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;-->&nbsp;memory&nbsp;safety,&nbsp;type&nbsp;inference,</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;immutability,&nbsp;pattern&nbsp;matching,&nbsp;etc.</p>
 </main>
 <main id="s7" style="display: none">
 <p class=shell>$&nbsp;diff&nbsp;node&nbsp;deno</p>
@@ -111,8 +111,8 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;Created&nbsp;by:</p>
 <p class=comment>&nbsp;&nbsp;Ryan&nbsp;Dahl</p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;^&nbsp;Left&nbsp;Node&nbsp;in&nbsp;2012&nbsp;because</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">//&nbsp;&nbsp;&nbsp;it&nbsp;was&nbsp;"finished"...</span></p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;^&nbsp;Left&nbsp;Node&nbsp;in&nbsp;2012&nbsp;because</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;it&nbsp;was&nbsp;"finished"...</p>
 </main>
 <main id="s9" style="display: none">
 <p class=shell>$&nbsp;join&nbsp;node&nbsp;deno</p>
@@ -126,11 +126,11 @@ built with V8, Rust, and Tokio
 <main id="s10" style="display: none">
 <p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
 <p class=code>&nbsp;</p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">/*</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Published&nbsp;every&nbsp;6&nbsp;months</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Shows&nbsp;current&nbsp;trends&nbsp;in&nbsp;tech</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;-&nbsp;Gives&nbsp;recommendations&nbsp;on&nbsp;adoption</span></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></p>
+<p class=grey>&nbsp;&nbsp;/*</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Published&nbsp;every&nbsp;6&nbsp;months</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Shows&nbsp;current&nbsp;trends&nbsp;in&nbsp;tech</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Gives&nbsp;recommendations&nbsp;on&nbsp;adoption</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
 </main>
 <main id="s11" style="display: none">
 <p class=code>&nbsp;&nbsp;🔥&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></p>
@@ -163,15 +163,123 @@ built with V8, Rust, and Tokio
 <p class=code>&nbsp;&nbsp;<i>&nbsp;&nbsp;&nbsp;have&nbsp;a&nbsp;look&nbsp;at&nbsp;Deno."</i></p>
 </main>
 <main id="s14" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security</p>
+<p class=code>&nbsp;</p>
+<p class=add>+&nbsp;-&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;Luckily,&nbsp;JS&nbsp;in&nbsp;the&nbsp;browser&nbsp;can't</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;make&nbsp;syscalls...</p>
+</main>
+<main id="s15" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox</p>
+<p class=add>+&nbsp;-&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</p>
+</main>
+<main id="s16" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox</p>
+<p class=add>+&nbsp;-&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</p>
+<p class=code>&nbsp;</p>
+<p class=rm>-&nbsp;-->&nbsp;Thanks&nbsp;to&nbsp;NPM,&nbsp;we're&nbsp;downloading&nbsp;and</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;running&nbsp;tons&nbsp;of&nbsp;potentially&nbsp;malicious</p>
+<p class=rm>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code&nbsp;from&nbsp;the&nbsp;internet...</p>
+</main>
+<main id="s17" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox</p>
+<p class=code>&nbsp;&nbsp;-&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever</p>
+<p class=add>+&nbsp;-&nbsp;Deno&nbsp;retains&nbsp;the&nbsp;secure&nbsp;sandbox&nbsp;via</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;permissions</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;For&nbsp;example:</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;-&nbsp;read&nbsp;and&nbsp;write&nbsp;files</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;-&nbsp;open&nbsp;sockets</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;-&nbsp;read&nbsp;environment&nbsp;variables</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;&nbsp;-&nbsp;run&nbsp;subprocesses</p>
+</main>
+<main id="s18" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security&nbsp;-&nbsp;In&nbsp;Practice</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;in&nbsp;examples/read_file.ts</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;<span style="color:coral">async</span>&nbsp;function&nbsp;<span style="color:lightgreen">main</span>()&nbsp;{</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:coral">await</span>&nbsp;Deno.<span style="color:lightgreen">readFile</span>(</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:khaki">"~/.ssh/id_ed25519"</span>);</p>
+<p class=code>&nbsp;&nbsp;}</p>
+<p class=code>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;<span style="color:lightgreen">main</span>();</p>
+</main>
+<main id="s19" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security&nbsp;-&nbsp;In&nbsp;Practice</p>
+<p class=code>&nbsp;</p>
+<p class=shell>$&nbsp;deno&nbsp;examples/read_file.ts</p>
+</main>
+<main id="s20" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security&nbsp;-&nbsp;In&nbsp;Practice</p>
+<p class=code>&nbsp;</p>
+<p class=shell>$&nbsp;deno&nbsp;examples/read_file.ts</p>
+<p class=code>&nbsp;</p>
+<p class=add>+&nbsp;⚠️&nbsp;Deno&nbsp;requests&nbsp;read&nbsp;access&nbsp;to</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;"~/.ssh/id_ed25519".</p>
+<p class=add>+</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;Grant?&nbsp;[a/y/n/d]</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;allow&nbsp;always</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;=&nbsp;allow&nbsp;once</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n&nbsp;=&nbsp;deny&nbsp;once</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;deny&nbsp;always</p>
+</main>
+<main id="s21" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security&nbsp;-&nbsp;In&nbsp;Practice</p>
+<p class=code>&nbsp;</p>
+<p class=shell>$&nbsp;deno&nbsp;examples/read_file.ts</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;...</p>
+<p class=code>&nbsp;</p>
+<p class=rm>-&nbsp;error:&nbsp;Uncaught&nbsp;PermissionDenied</p>
+</main>
+<main id="s22" style="display: none">
+<p class=comment>&nbsp;&nbsp;#&nbsp;Security&nbsp;-&nbsp;In&nbsp;Practice</p>
+<p class=code>&nbsp;</p>
+<p class=add>+&nbsp;-&nbsp;To&nbsp;avoid&nbsp;permission&nbsp;prompts,</p>
+<p class=add>+&nbsp;&nbsp;&nbsp;you&nbsp;can&nbsp;use&nbsp;command-line&nbsp;flags</p>
+<p class=code>&nbsp;</p>
+<p class=grey>&nbsp;&nbsp;//&nbsp;For&nbsp;example:</p>
+<p class=grey>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--allow-read</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;allow&nbsp;all&nbsp;files&nbsp;to&nbsp;be&nbsp;read</p>
+<p class=grey>&nbsp;</p>
+<p class=code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--allow-read=$dir</p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;allow&nbsp;reading&nbsp;files&nbsp;in&nbsp;$dir</p>
+</main>
+<main id="s23" style="display: none"></main>
+<main id="s24" style="display: none">
 <p class=file>>&nbsp;References</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">10&nbsp;Things&nbsp;I&nbsp;Regret&nbsp;About&nbsp;Node.js</a></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JSConf&nbsp;EU&nbsp;2018</span></p>
+<p class=grey>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JSConf&nbsp;EU&nbsp;2018</p>
 <p class=code>&nbsp;</p>
 <p class=code>&nbsp;&nbsp;-&nbsp;<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">Deno,&nbsp;a&nbsp;new&nbsp;way&nbsp;to&nbsp;JavaScript</a></p>
-<p class=code>&nbsp;&nbsp;<span style="color:grey">&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JS&nbsp;Fest&nbsp;2019</span></p>
+<p class=grey>&nbsp;&nbsp;&nbsp;//&nbsp;video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;@&nbsp;JS&nbsp;Fest&nbsp;2019</p>
 </main>
-<main id="s15" style="display: none"><div
+<main id="s25" style="display: none"><div
 style="display: flex; flex-direction: column; height: 50vh; justify-content: center; align-items: center;"
 >
 <div style="font-size: 200%;">THE END;</div>

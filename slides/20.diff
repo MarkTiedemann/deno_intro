@@ -1,0 +1,12 @@
+# # Security - In Practice
+|
+$ deno examples/read_file.ts
+|
++ ⚠️ Deno requests read access to
++    "~/.ssh/id_ed25519".
++
++    Grant? [a/y/n/d]
++      a = allow always
++      y = allow once
++      n = deny once
++      d = deny always

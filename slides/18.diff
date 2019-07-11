@@ -1,0 +1,10 @@
+# # Security - In Practice
+|
+/ // in examples/read_file.ts
+|
+| <span\wstyle="color:coral">async</span> function <span\wstyle="color:lightgreen">main</span>() {
+|     <span\wstyle="color:coral">await</span> Deno.<span\wstyle="color:lightgreen">readFile</span>(
+|         <span\wstyle="color:khaki">"~/.ssh/id_ed25519"</span>);
+| }
+|
+| <span\wstyle="color:lightgreen">main</span>();
