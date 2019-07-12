@@ -1,8 +1,10 @@
-<dodgerblue># Detour: <a><href>https://www.thoughtworks.com/radar/platforms</href>ThoughtWorks Technology Radar</a></dodgerblue>
+<dodgerblue># Trends</dodgerblue>
 
-Recommendation Types:
+> ThoughtWorks Technology Radar
+  ~ <a><href>https://www.thoughtworks.com/radar</href>thoughtworks.com/radar</a>
 
-  <crimson>HOLD</crimson>   > <i>"I wish you <u>wouldn't use</u> this tech."</i>
-  <tomato>ASSESS</tomato> > <i>"I wish you <u>could use</u> this tech."</i>
-  <gold>TRIAL</gold>  > <i>"You <u>should try</u> this tech!"</i>
-  <springgreen>ADOPT</springgreen>  > <i>"You <u>should use</u> this tech!"</i>
+<grey>/*
+ * - Published every 6 months
+ * - Shows current trends in tech
+ * - Gives recommendations on adoption
+ */</grey>

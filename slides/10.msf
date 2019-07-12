@@ -1,7 +1,7 @@
-<dodgerblue># Detour: <a><href>https://www.thoughtworks.com/radar/platforms</href>ThoughtWorks Technology Radar</a></dodgerblue>
+<dodgerblue># Similarities</dodgerblue>
 
-<grey>/*</grey>
-<grey> * - Published every 6 months</grey>
-<grey> * - Shows current trends in tech</grey>
-<grey> * - Gives recommendations on adoption</grey>
-<grey> */</grey>
+  Created by:
+  <dodgerblue>Ryan Dahl</dodgerblue>
+
+  Engine:
+  <dodgerblue>V8</dodgerblue> <grey>// <-- Used in Chrome</grey>

@@ -1,7 +1,12 @@
-<dodgerblue># References</dodgerblue>
+<dodgerblue># Getting Started</dodgerblue>
 
-- <a><href>https://www.youtube.com/watch?v=M3BM9TB-8yA</href><i>"10 Things I Regret About Node.js"</i></a>
-  ~ Video by Ryan Dahl at JSConf EU 2018
+- Visit the website: <a><href>https://deno.land</href>deno.land</a>
+- Install Deno:
 
-- <a><href>https://www.youtube.com/watch?v=z6JRlx5NC9E</href><i>"Deno, a new way to JavaScript"</i></a>
-  ~ Video by Ryan Dahl at JS Fest 2019
+<khaki>$ brew install deno</khaki>   <grey># On MacOS</grey>
+<khaki>$ scoop install deno</khaki>  <grey># On Windows</grey>
+
+- Run your first script:
+
+<khaki>$ deno https://deno.land/welcome.ts</khaki>
+  Welcome to Deno 🦕

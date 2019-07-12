@@ -1,12 +1,10 @@
 <dodgerblue># Security</dodgerblue>
 
-<khaki>$ deno examples/read_file.ts</khaki>
+<grey>// in examples/read_file.ts</grey>
 
-  <gold>⚠️ Deno requests read access to</gold>
-  <gold>  "~/.ssh/id_ed25519".</gold>
+<coral>async</coral> <coral>function</coral> <lightgreen>main</lightgreen>() {
+    <coral>await</coral> Deno.<lightgreen>readFile</lightgreen>(
+        <khaki>"~/.ssh/id_ed25519"</khaki>);
+}
 
-    Grant? [a/y/n/d]
-      a = allow always
-      y = allow once
-      n = deny once
-      d = deny always
+<lightgreen>main</lightgreen>();

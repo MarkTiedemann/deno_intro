@@ -5,18 +5,28 @@
     <link href="index.css" rel="stylesheet" />
     <script src="index.js"></script>
     <script>
-      window.lastSlide = 29;
+      window.lastSlide = 30;
     </script>
     
     <div class="slide" id="s0"><span style="color: dodgerblue;">#&nbsp;deno_intro</span><br />
 <br />
-|&nbsp;From&nbsp;Node&nbsp;to&nbsp;Deno.<br />
+\&nbsp;Part&nbsp;I:&nbsp;From&nbsp;Node&nbsp;to&nbsp;Deno<br />
+\&nbsp;Part&nbsp;II:&nbsp;Intro&nbsp;to&nbsp;Deno<br />
 <br />
 <span style="color: dodgerblue;">></span>&nbsp;Slides:&nbsp;<a href="https://marksweb.site/deno_intro">marksweb.site/deno_intro</a><br />
 <span style="color: dodgerblue;">></span>&nbsp;Source:&nbsp;<a href="https://github.com/marktiedemann/deno_intro">github.com/marktiedemann/deno_intro</a><br /></div>
   
 
-    <div class="slide" id="s1"><style>
+    <div class="slide" id="s1"><span style="color: dodgerblue;">#&nbsp;Agenda</span><br />
+<br />
+\&nbsp;Part&nbsp;I:&nbsp;From&nbsp;Node&nbsp;to&nbsp;Deno<br />
+<br />
+-&nbsp;Differences<br />
+-&nbsp;Similarities<br />
+-&nbsp;Trends<br /></div>
+  
+
+    <div class="slide" id="s2"><style>
   .node-container {
     height: 100%;
     font-family: sans-serif;
@@ -51,7 +61,7 @@
 </div>
   
 
-    <div class="slide" id="s2"><style>
+    <div class="slide" id="s3"><style>
   .deno-container {
     height: 100%;
     font-family: sans-serif;
@@ -86,18 +96,18 @@
 </div>
   
 
-    <div class="slide" id="s3"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
+    <div class="slide" id="s4"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
 <br />
 &nbsp;&nbsp;Runtime&nbsp;for:<br />
 <span style="color: crimson;">-&nbsp;JavaScript</span><br />
 <span style="color: springgreen;">+&nbsp;JavaScript&nbsp;and&nbsp;TypeScript</span><br />
 <br />
-<span style="color: grey;">//&nbsp;-&nbsp;TS&nbsp;compiler&nbsp;is&nbsp;built-in!</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;&nbsp;(No&nbsp;need&nbsp;to&nbsp;run&nbsp;`tsc`.)</span><br />
-<span style="color: grey;">//&nbsp;-&nbsp;TS&nbsp;compilation&nbsp;AOT&nbsp;or&nbsp;JIT.</span><br /></div>
+<span style="color: grey;">//&nbsp;-&nbsp;TS&nbsp;compiler&nbsp;is&nbsp;built-in!<br />
+//&nbsp;&nbsp;&nbsp;(No&nbsp;need&nbsp;to&nbsp;run&nbsp;`tsc`.)<br />
+//&nbsp;-&nbsp;TS&nbsp;compilation&nbsp;AOT&nbsp;or&nbsp;JIT.</span><br /></div>
   
 
-    <div class="slide" id="s4"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
+    <div class="slide" id="s5"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
 <br />
 &nbsp;&nbsp;Runtime&nbsp;for:<br />
 <span style="color: crimson;">-&nbsp;JavaScript</span><br />
@@ -107,12 +117,12 @@
 <span style="color: crimson;">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;evented&nbsp;I/O</span><br />
 <span style="color: springgreen;">+&nbsp;secure&nbsp;evented&nbsp;I/O</span><br />
 <br />
-<span style="color: grey;">//&nbsp;-&nbsp;Focus&nbsp;on&nbsp;performance&nbsp;and&nbsp;security.</span><br />
-<span style="color: grey;">//&nbsp;-&nbsp;Deno's&nbsp;I/O&nbsp;performance&nbsp;is&nbsp;close&nbsp;to</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;&nbsp;Node's&nbsp;already.</span><br /></div>
+<span style="color: grey;">//&nbsp;-&nbsp;Focus&nbsp;on&nbsp;performance&nbsp;and&nbsp;security.<br />
+//&nbsp;-&nbsp;Deno's&nbsp;I/O&nbsp;performance&nbsp;is&nbsp;close&nbsp;to<br />
+//&nbsp;&nbsp;&nbsp;Node's&nbsp;already.</span><br /></div>
   
 
-    <div class="slide" id="s5"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
+    <div class="slide" id="s6"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
 <br />
 &nbsp;&nbsp;Runtime&nbsp;for:<br />
 <span style="color: crimson;">-&nbsp;JavaScript</span><br />
@@ -127,7 +137,7 @@
 <span style="color: springgreen;">+&nbsp;2018</span>&nbsp;<span style="color: grey;">//&nbsp;v1&nbsp;in&nbsp;Summer&nbsp;2019?</span><br /></div>
   
 
-    <div class="slide" id="s6"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
+    <div class="slide" id="s7"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
 <br />
 &nbsp;&nbsp;Runtime&nbsp;for:<br />
 <span style="color: crimson;">-&nbsp;JavaScript</span><br />
@@ -144,7 +154,7 @@
 <span style="color: grey;">//&nbsp;-->&nbsp;Safer,&nbsp;more&nbsp;modern&nbsp;development</span><br /></div>
   
 
-    <div class="slide" id="s7"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
+    <div class="slide" id="s8"><span style="color: dodgerblue;">#&nbsp;Differences</span><br />
 <br />
 &nbsp;&nbsp;Runtime&nbsp;for:<br />
 <span style="color: crimson;">-&nbsp;JavaScript</span><br />
@@ -159,7 +169,7 @@
 <span style="color: springgreen;">+&nbsp;2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Rust&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;Tokio</span><br /></div>
   
 
-    <div class="slide" id="s8"><span style="color: dodgerblue;">#&nbsp;Similarities</span><br />
+    <div class="slide" id="s9"><span style="color: dodgerblue;">#&nbsp;Similarities</span><br />
 <br />
 &nbsp;&nbsp;Created&nbsp;by:<br />
 &nbsp;&nbsp;<span style="color: dodgerblue;">Ryan&nbsp;Dahl</span><br />
@@ -168,7 +178,7 @@
 &nbsp;&nbsp;<span style="color: grey;">//&nbsp;&nbsp;&nbsp;it&nbsp;was&nbsp;"finished"...</span><br /></div>
   
 
-    <div class="slide" id="s9"><span style="color: dodgerblue;">#&nbsp;Similarities</span><br />
+    <div class="slide" id="s10"><span style="color: dodgerblue;">#&nbsp;Similarities</span><br />
 <br />
 &nbsp;&nbsp;Created&nbsp;by:<br />
 &nbsp;&nbsp;<span style="color: dodgerblue;">Ryan&nbsp;Dahl</span><br />
@@ -177,18 +187,24 @@
 &nbsp;&nbsp;<span style="color: dodgerblue;">V8</span>&nbsp;<span style="color: grey;">//&nbsp;<--&nbsp;Used&nbsp;in&nbsp;Chrome</span><br /></div>
   
 
-    <div class="slide" id="s10"><span style="color: dodgerblue;">#&nbsp;Detour:&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></span><br />
+    <div class="slide" id="s11"><span style="color: dodgerblue;">#&nbsp;Trends</span><br />
 <br />
-<span style="color: grey;">/*</span><br />
-<span style="color: grey;">&nbsp;*&nbsp;-&nbsp;Published&nbsp;every&nbsp;6&nbsp;months</span><br />
-<span style="color: grey;">&nbsp;*&nbsp;-&nbsp;Shows&nbsp;current&nbsp;trends&nbsp;in&nbsp;tech</span><br />
-<span style="color: grey;">&nbsp;*&nbsp;-&nbsp;Gives&nbsp;recommendations&nbsp;on&nbsp;adoption</span><br />
-<span style="color: grey;">&nbsp;*/</span><br /></div>
+>&nbsp;ThoughtWorks&nbsp;Technology&nbsp;Radar<br />
+&nbsp;&nbsp;~&nbsp;<a href="https://www.thoughtworks.com/radar">thoughtworks.com/radar</a><br />
+<br />
+<span style="color: grey;">/*<br />
+&nbsp;*&nbsp;-&nbsp;Published&nbsp;every&nbsp;6&nbsp;months<br />
+&nbsp;*&nbsp;-&nbsp;Shows&nbsp;current&nbsp;trends&nbsp;in&nbsp;tech<br />
+&nbsp;*&nbsp;-&nbsp;Gives&nbsp;recommendations&nbsp;on&nbsp;adoption<br />
+&nbsp;*/</span><br /></div>
   
 
-    <div class="slide" id="s11"><span style="color: dodgerblue;">#&nbsp;Detour:&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></span><br />
+    <div class="slide" id="s12"><span style="color: dodgerblue;">#&nbsp;Trends</span><br />
 <br />
-Recommendation&nbsp;Types:<br />
+>&nbsp;ThoughtWorks&nbsp;Technology&nbsp;Radar<br />
+&nbsp;&nbsp;~&nbsp;<a href="https://www.thoughtworks.com/radar">thoughtworks.com/radar</a><br />
+<br />
+-&nbsp;Recommendation&nbsp;types:<br />
 <br />
 &nbsp;&nbsp;<span style="color: crimson;">HOLD</span>&nbsp;&nbsp;&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>wouldn't&nbsp;use</u>&nbsp;this&nbsp;tech."</i><br />
 &nbsp;&nbsp;<span style="color: tomato;">ASSESS</span>&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>could&nbsp;use</u>&nbsp;this&nbsp;tech."</i><br />
@@ -196,9 +212,12 @@ Recommendation&nbsp;Types:<br />
 &nbsp;&nbsp;<span style="color: springgreen;">ADOPT</span>&nbsp;&nbsp;>&nbsp;<i>"You&nbsp;<u>should&nbsp;use</u>&nbsp;this&nbsp;tech!"</i><br /></div>
   
 
-    <div class="slide" id="s12"><span style="color: dodgerblue;">#&nbsp;Detour:&nbsp;<a href="https://www.thoughtworks.com/radar/platforms">ThoughtWorks&nbsp;Technology&nbsp;Radar</a></span><br />
+    <div class="slide" id="s13"><span style="color: dodgerblue;">#&nbsp;Trends</span><br />
 <br />
-Recommendation&nbsp;Types:<br />
+>&nbsp;ThoughtWorks&nbsp;Technology&nbsp;Radar<br />
+&nbsp;&nbsp;~&nbsp;<a href="https://www.thoughtworks.com/radar">thoughtworks.com/radar</a><br />
+<br />
+-&nbsp;Recommendation&nbsp;types:<br />
 <br />
 &nbsp;&nbsp;<span style="color: crimson;">HOLD</span>&nbsp;&nbsp;&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>wouldn't&nbsp;use</u>&nbsp;this&nbsp;tech."</i><br />
 &nbsp;&nbsp;<span style="color: tomato;">ASSESS</span>&nbsp;>&nbsp;<i>"I&nbsp;wish&nbsp;you&nbsp;<u>could&nbsp;use</u>&nbsp;this&nbsp;tech."</i><br />
@@ -211,14 +230,9 @@ Recommendation&nbsp;Types:<br />
 <span style="color: grey;">//&nbsp;PS:&nbsp;36k&nbsp;⭐'s&nbsp;on&nbsp;GitHub!</span><br /></div>
   
 
-    <div class="slide" id="s13"><span style="color: dodgerblue;">#&nbsp;Agenda</span><br />
+    <div class="slide" id="s14"><span style="color: dodgerblue;">#&nbsp;Agenda</span><br />
 <br />
-|&nbsp;Part&nbsp;1:&nbsp;From&nbsp;Node&nbsp;to&nbsp;Deno<br />
-<br />
--&nbsp;Differences<br />
--&nbsp;Similarities<br />
-<br />
-|&nbsp;Part&nbsp;2:&nbsp;Intro&nbsp;to&nbsp;Deno<br />
+\&nbsp;Part&nbsp;II:&nbsp;Intro&nbsp;to&nbsp;Deno<br />
 <br />
 -&nbsp;Security<br />
 -&nbsp;Promises<br />
@@ -229,42 +243,25 @@ Recommendation&nbsp;Types:<br />
 -&nbsp;Getting&nbsp;Started<br /></div>
   
 
-    <div class="slide" id="s14"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
+    <div class="slide" id="s15"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 <span style="color: lightgreen;">+&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox</span><br />
 <br />
-<span style="color: grey;">//&nbsp;Luckily,&nbsp;JS&nbsp;in&nbsp;the&nbsp;browser&nbsp;can't</span><br />
-<span style="color: grey;">//&nbsp;make&nbsp;syscalls...</span><br /></div>
-  
-
-    <div class="slide" id="s15"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
-<br />
--&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox<br />
-<span style="color: lightgreen;">+&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets<br />
-&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever</span><br />
-<br />
-<span style="color: grey;">//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,</span><br />
-<span style="color: grey;">//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.</span><br />
-<br />
-<span style="color: grey;">//&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</span><br /></div>
+<span style="color: grey;">//&nbsp;Luckily,&nbsp;JS&nbsp;in&nbsp;the&nbsp;browser&nbsp;can't<br />
+//&nbsp;make&nbsp;syscalls...</span><br /></div>
   
 
     <div class="slide" id="s16"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 -&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox<br />
--&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets<br />
-&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever<br />
+<span style="color: lightgreen;">+&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets<br />
+&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever</span><br />
 <br />
-<span style="color: grey;">//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,</span><br />
-<span style="color: grey;">//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.</span><br />
+<span style="color: grey;">//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,<br />
+//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.<br />
 <br />
-<span style="color: grey;">//&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</span><br />
-<br />
-<span style="color: crimson;">&nbsp;&nbsp;&nbsp;-->&nbsp;Thanks&nbsp;to&nbsp;NPM,&nbsp;we're&nbsp;downloading&nbsp;and</span><br />
-<span style="color: crimson;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;running&nbsp;tons&nbsp;of&nbsp;potentially&nbsp;malicious</span><br />
-<span style="color: crimson;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code&nbsp;from&nbsp;the&nbsp;internet...</span><br /></div>
+//&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</span><br /></div>
   
 
     <div class="slide" id="s17"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
@@ -272,17 +269,34 @@ Recommendation&nbsp;Types:<br />
 -&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox<br />
 -&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets<br />
 &nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever<br />
-<span style="color: lightgreen;">+&nbsp;Deno&nbsp;retains&nbsp;the&nbsp;secure&nbsp;sandbox&nbsp;via<br />
-&nbsp;&nbsp;permissions</span><br />
 <br />
-<span style="color: grey;">//&nbsp;For&nbsp;example:</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;-&nbsp;Read&nbsp;and&nbsp;write&nbsp;files</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;-&nbsp;Open&nbsp;sockets</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;-&nbsp;Read&nbsp;environment&nbsp;variables</span><br />
-<span style="color: grey;">//&nbsp;&nbsp;-&nbsp;Run&nbsp;subprocesses</span><br /></div>
+<span style="color: grey;">//&nbsp;Steal&nbsp;SSH&nbsp;keys,&nbsp;environment&nbsp;variables,<br />
+//&nbsp;install&nbsp;a&nbsp;trojan,&nbsp;BitCoin&nbsp;miner,&nbsp;etc.<br />
+<br />
+//&nbsp;-->&nbsp;When&nbsp;using&nbsp;Node,&nbsp;as&nbsp;soon&nbsp;as&nbsp;you&nbsp;run<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code,&nbsp;it&nbsp;may&nbsp;take&nbsp;over&nbsp;your&nbsp;device...</span><br />
+<br />
+<span style="color: crimson;">&nbsp;&nbsp;&nbsp;-->&nbsp;Thanks&nbsp;to&nbsp;NPM,&nbsp;we're&nbsp;downloading&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;running&nbsp;tons&nbsp;of&nbsp;potentially&nbsp;malicious<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code&nbsp;from&nbsp;the&nbsp;internet...</span><br /></div>
   
 
     <div class="slide" id="s18"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
+<br />
+-&nbsp;V8&nbsp;is&nbsp;already&nbsp;a&nbsp;secure&nbsp;sandbox<br />
+-&nbsp;Node&nbsp;opens&nbsp;up&nbsp;the&nbsp;sandbox&nbsp;and&nbsp;lets<br />
+&nbsp;&nbsp;a&nbsp;program&nbsp;do&nbsp;whatever<br />
+<span style="color: lightgreen;">+&nbsp;Deno&nbsp;retains&nbsp;the&nbsp;secure&nbsp;sandbox&nbsp;via<br />
+&nbsp;&nbsp;permissions</span><br />
+<br />
+<span style="color: grey;">//&nbsp;For&nbsp;example:<br />
+//&nbsp;&nbsp;-&nbsp;Read&nbsp;and&nbsp;write&nbsp;files<br />
+//&nbsp;&nbsp;-&nbsp;Open&nbsp;sockets<br />
+//&nbsp;&nbsp;-&nbsp;Read&nbsp;environment&nbsp;variables<br />
+//&nbsp;&nbsp;-&nbsp;Run&nbsp;subprocesses</span><br /></div>
+  
+
+    <div class="slide" id="s19"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 <span style="color: grey;">//&nbsp;in&nbsp;examples/read_file.ts</span><br />
 <br />
@@ -294,7 +308,7 @@ Recommendation&nbsp;Types:<br />
 <span style="color: lightgreen;">main</span>();<br /></div>
   
 
-    <div class="slide" id="s19"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
+    <div class="slide" id="s20"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 <span style="color: khaki;">$&nbsp;deno&nbsp;examples/read_file.ts</span><br />
 <br />
@@ -308,7 +322,7 @@ Recommendation&nbsp;Types:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;deny&nbsp;always<br /></div>
   
 
-    <div class="slide" id="s20"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
+    <div class="slide" id="s21"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 <span style="color: khaki;">$&nbsp;deno&nbsp;examples/read_file.ts</span><br />
 <br />
@@ -317,7 +331,7 @@ Recommendation&nbsp;Types:<br />
 <span style="color: crimson;">&nbsp;&nbsp;error:&nbsp;Uncaught&nbsp;PermissionDenied</span><br /></div>
   
 
-    <div class="slide" id="s21"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
+    <div class="slide" id="s22"><span style="color: dodgerblue;">#&nbsp;Security</span><br />
 <br />
 -&nbsp;To&nbsp;avoid&nbsp;permission&nbsp;prompts,<br />
 &nbsp;&nbsp;you&nbsp;can&nbsp;use&nbsp;command-line&nbsp;flags<br />
@@ -331,7 +345,7 @@ Recommendation&nbsp;Types:<br />
 &nbsp;&nbsp;&nbsp;<span style="color: grey;">//&nbsp;allow&nbsp;reading&nbsp;files&nbsp;in&nbsp;$dir</span><br /></div>
   
 
-    <div class="slide" id="s22"><span style="color: dodgerblue;">#&nbsp;Feature&nbsp;-&nbsp;Promises</span><br />
+    <div class="slide" id="s23"><span style="color: dodgerblue;">#&nbsp;Promises</span><br />
 <br />
 -&nbsp;<u>Fun&nbsp;Fact</u>:&nbsp;Node&nbsp;adopted&nbsp;Promises&nbsp;in&nbsp;2009,<br />
 &nbsp;&nbsp;but&nbsp;removed&nbsp;them&nbsp;in&nbsp;2010<br />
@@ -345,7 +359,7 @@ Recommendation&nbsp;Types:<br />
 <span style="color: grey;">//&nbsp;<a href="https://deno.land/typedoc/index.html">deno.land/typedoc/index.html</a></span><br /></div>
   
 
-    <div class="slide" id="s23"><span style="color: dodgerblue;">#&nbsp;Feature&nbsp;-&nbsp;Modules</span><br />
+    <div class="slide" id="s24"><span style="color: dodgerblue;">#&nbsp;Modules</span><br />
 <br />
 -&nbsp;No&nbsp;`<span style="color: lightgreen;">require</span>`&nbsp;function.<br />
 -&nbsp;ES&nbsp;modules&nbsp;work&nbsp;out&nbsp;of&nbsp;the&nbsp;box.<br />
@@ -362,7 +376,7 @@ Recommendation&nbsp;Types:<br />
 <span style="color: lightgreen;">hello</span>(<span style="color: khaki;">"World"</span>);<br /></div>
   
 
-    <div class="slide" id="s24"><span style="color: dodgerblue;">#&nbsp;Feature&nbsp;-&nbsp;Package&nbsp;Management</span><br />
+    <div class="slide" id="s25"><span style="color: dodgerblue;">#&nbsp;Package&nbsp;Management</span><br />
 <br />
 -&nbsp;No&nbsp;NPM,&nbsp;no&nbsp;<span style="color: khaki;">`node_modules`</span>,&nbsp;no&nbsp;<span style="color: khaki;">`index.js`</span>.<br />
 -&nbsp;Import&nbsp;modules&nbsp;from&nbsp;URLs&nbsp;-&nbsp;like&nbsp;a&nbsp;browser!<br />
@@ -379,28 +393,28 @@ Recommendation&nbsp;Types:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: khaki;">/x/postgres@v0.2.0/mod.ts"</span>;<br /></div>
   
 
-    <div class="slide" id="s25"><span style="color: dodgerblue;">#&nbsp;Feature&nbsp;-&nbsp;Web&nbsp;Compatibility</span><br />
+    <div class="slide" id="s26"><span style="color: dodgerblue;">#&nbsp;Web&nbsp;Compatibility</span><br />
 <br />
-<i>"The&nbsp;subset&nbsp;of&nbsp;Deno&nbsp;programs&nbsp;which&nbsp;are</i><br />
-<i>&nbsp;written&nbsp;completely&nbsp;in&nbsp;JavaScript&nbsp;and&nbsp;do</i><br />
-<i>&nbsp;not&nbsp;use&nbsp;the&nbsp;global&nbsp;`Deno`&nbsp;namespace,&nbsp;ought</i><br />
-<i>&nbsp;to&nbsp;also&nbsp;be&nbsp;able&nbsp;to&nbsp;be&nbsp;run&nbsp;in&nbsp;a&nbsp;modern&nbsp;web</i><br />
-<i>&nbsp;browser&nbsp;without&nbsp;change."</i><br />
-<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Deno&nbsp;Manual</i><br />
+<span style="color: lightgrey;"><i>"The&nbsp;subset&nbsp;of&nbsp;Deno&nbsp;programs&nbsp;which&nbsp;are<br />
+&nbsp;written&nbsp;completely&nbsp;in&nbsp;JavaScript&nbsp;and&nbsp;do<br />
+&nbsp;not&nbsp;use&nbsp;the&nbsp;global&nbsp;`Deno`&nbsp;namespace,&nbsp;ought<br />
+&nbsp;to&nbsp;also&nbsp;be&nbsp;able&nbsp;to&nbsp;be&nbsp;run&nbsp;in&nbsp;a&nbsp;modern&nbsp;web<br />
+&nbsp;browser&nbsp;without&nbsp;change."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;Deno&nbsp;Manual</i></span><br />
 <br />
 -&nbsp;Unlike&nbsp;in&nbsp;Node,&nbsp;`window`&nbsp;is&nbsp;defined.<br />
 -&nbsp;For&nbsp;example,&nbsp;`<span style="color: lightgreen;">fetch</span>`&nbsp;just&nbsp;works!<br />
 -&nbsp;Compatibility&nbsp;is&nbsp;WIP,&nbsp;see:&nbsp;<a href="https://deno.dev/wpt">deno.dev/wpt</a><br /></div>
   
 
-    <div class="slide" id="s26"><span style="color: dodgerblue;">#&nbsp;Feature&nbsp;-&nbsp;Dev&nbsp;Tools</span><br />
+    <div class="slide" id="s27"><span style="color: dodgerblue;">#&nbsp;Dev&nbsp;Tools</span><br />
 <br />
 -&nbsp;<span style="color: khaki;">`deno&nbsp;fmt`</span>:&nbsp;Format&nbsp;code&nbsp;consistently<br />
 -&nbsp;<span style="color: khaki;">`deno&nbsp;bundle`</span>:&nbsp;Bundle&nbsp;code&nbsp;as&nbsp;single&nbsp;file<br />
 -&nbsp;<span style="color: khaki;">`deno&nbsp;info`</span>:&nbsp;Show&nbsp;module&nbsp;dependency&nbsp;tree<br /></div>
   
 
-    <div class="slide" id="s27"><span style="color: dodgerblue;">#&nbsp;Getting&nbsp;Started</span><br />
+    <div class="slide" id="s28"><span style="color: dodgerblue;">#&nbsp;Getting&nbsp;Started</span><br />
 <br />
 -&nbsp;Visit&nbsp;the&nbsp;website:&nbsp;<a href="https://deno.land">deno.land</a><br />
 -&nbsp;Install&nbsp;Deno:<br />
@@ -414,15 +428,15 @@ Recommendation&nbsp;Types:<br />
 &nbsp;&nbsp;Welcome&nbsp;to&nbsp;Deno&nbsp;🦕<br /></div>
   
 
-    <div class="slide" id="s28"><span style="color: dodgerblue;">#&nbsp;References</span><br />
+    <div class="slide" id="s29"><span style="color: dodgerblue;">#&nbsp;References</span><br />
 <br />
--&nbsp;<a href="https://www.youtube.com/watch?v=M3BM9TB-8yA"><i>"10&nbsp;Things&nbsp;I&nbsp;Regret&nbsp;About&nbsp;Node.js"</i></a><br />
+-&nbsp;<a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">"10&nbsp;Things&nbsp;I&nbsp;Regret&nbsp;About&nbsp;Node.js"</a><br />
 &nbsp;&nbsp;~&nbsp;Video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;at&nbsp;JSConf&nbsp;EU&nbsp;2018<br />
 <br />
--&nbsp;<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E"><i>"Deno,&nbsp;a&nbsp;new&nbsp;way&nbsp;to&nbsp;JavaScript"</i></a><br />
+-&nbsp;<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">"Deno,&nbsp;a&nbsp;new&nbsp;way&nbsp;to&nbsp;JavaScript"</a><br />
 &nbsp;&nbsp;~&nbsp;Video&nbsp;by&nbsp;Ryan&nbsp;Dahl&nbsp;at&nbsp;JS&nbsp;Fest&nbsp;2019<br /></div>
   
 
-    <div class="slide" id="s29"><span style="color: crimson;">THE&nbsp;END;</span><br /></div>
+    <div class="slide" id="s30">THE&nbsp;END;<br /></div>
   
   

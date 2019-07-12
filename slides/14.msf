@@ -1,6 +1,11 @@
-<dodgerblue># Security</dodgerblue>
+<dodgerblue># Agenda</dodgerblue>
 
-<lightgreen>+ V8 is already a secure sandbox</lightgreen>
+\ Part II: Intro to Deno
 
-<grey>// Luckily, JS in the browser can't</grey>
-<grey>// make syscalls...</grey>
+- Security
+- Promises
+- Modules
+- Package Management
+- Web Compatibility
+- Dev Tools
+- Getting Started

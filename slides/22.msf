@@ -1,12 +1,12 @@
-<dodgerblue># Feature - Promises</dodgerblue>
+<dodgerblue># Security</dodgerblue>
 
-- <u>Fun Fact</u>: Node adopted Promises in 2009,
-  but removed them in 2010
+- To avoid permission prompts,
+  you can use command-line flags
 
-- Deno's API's are built for <coral>asnyc/await</coral>,
-  for example:
+<grey>// For example:</grey>
 
-  <lightgreen>readFile</lightgreen>(name: <lightblue>string</lightblue>): Promise<<lightblue>Uint8Array</lightblue>>;
+   --allow-read
+   <grey>// allow all files to be read</grey>
 
-<grey>// API Reference:</grey>
-<grey>// <a><href>https://deno.land/typedoc/index.html</href>deno.land/typedoc/index.html</a></grey>
+   --allow-read=$dir
+   <grey>// allow reading files in $dir</grey>

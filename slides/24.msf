@@ -1,15 +1,15 @@
-<dodgerblue># Feature - Package Management</dodgerblue>
+<dodgerblue># Modules</dodgerblue>
 
-- No NPM, no <khaki>`node_modules`</khaki>, no <khaki>`index.js`</khaki>.
-- Import modules from URLs - like a browser!
-- Modules are cached in <khaki>`$DENO_DIR`</khaki>.
-- Import maps are supported. No SRI yet.
-- Standard library:
+- No `<lightgreen>require</lightgreen>` function.
+- ES modules work out of the box.
 
-  <coral>import</coral> * <coral>as</coral> fs <coral>from</coral> <khaki>"https://deno.land</khaki>
-      <khaki>/std@v0.11.0/fs/mod.ts"</khaki>;
+<grey>// For example:</grey>
 
-- Registry with userland modules:
+<grey>// in hello.ts</grey>
+<coral>export</coral> <coral>function</coral> <lightgreen>hello</lightgreen>(name: <lightblue>string</lightblue>) {
+    console.<lightgreen>log</lightgreen>(<khaki>`Hello, </khaki><coral>${</coral>name<coral>}</coral><khaki>!`</khaki>);
+}
 
-  <coral>import</coral> * <coral>as</coral> pg <coral>from</coral> <khaki>"https://deno.land</khaki>
-      <khaki>/x/postgres@v0.2.0/mod.ts"</khaki>;
+<grey>// in world.ts</grey>
+<coral>import</coral> { hello } <coral>from</coral> <khaki>"./hello.ts"</khaki>;
+<lightgreen>hello</lightgreen>(<khaki>"World"</khaki>);

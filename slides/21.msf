@@ -1,12 +1,7 @@
 <dodgerblue># Security</dodgerblue>
 
-- To avoid permission prompts,
-  you can use command-line flags
+<khaki>$ deno examples/read_file.ts</khaki>
 
-<grey>// For example:</grey>
+<grey>  // ...</grey>
 
-   --allow-read
-   <grey>// allow all files to be read</grey>
-
-   --allow-read=$dir
-   <grey>// allow reading files in $dir</grey>
+<crimson>  error: Uncaught PermissionDenied</crimson>

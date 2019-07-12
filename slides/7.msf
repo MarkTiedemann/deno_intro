@@ -8,6 +8,8 @@
 <crimson>-        evented I/O</crimson>
 <springgreen>+ secure evented I/O</springgreen>
 
-  Created in / Developed in / Event loop:
-<crimson>- 2009       / C++          / libuv</crimson>
-<springgreen>+ 2018       / Rust         / Tokio</springgreen>
+  Created in / Developed in:
+<crimson>- 2009       / C++</crimson>
+<springgreen>+ 2018       / Rust</springgreen>
+
+<grey>// --> Safer, more modern development</grey>
