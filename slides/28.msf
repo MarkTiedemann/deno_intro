@@ -1,12 +1,5 @@
-<dodgerblue># Getting Started</dodgerblue>
+<dodgerblue># Dev Tools</dodgerblue>
 
-- Visit the website: <a><href>https://deno.land</href>deno.land</a>
-- Install Deno:
-
-<khaki>$ brew install deno</khaki>   <grey># On MacOS</grey>
-<khaki>$ scoop install deno</khaki>  <grey># On Windows</grey>
-
-- Run your first script:
-
-<khaki>$ deno https://deno.land/welcome.ts</khaki>
-  Welcome to Deno 🦕
+- <khaki>`deno fmt`</khaki>: Format code consistently
+- <khaki>`deno bundle`</khaki>: Bundle code as single file
+- <khaki>`deno info`</khaki>: Show module dependency tree

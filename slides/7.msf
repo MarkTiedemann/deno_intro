@@ -8,8 +8,6 @@
 <crimson>-        evented I/O</crimson>
 <springgreen>+ secure evented I/O</springgreen>
 
-  Created in / Developed in:
-<crimson>- 2009       / C++</crimson>
-<springgreen>+ 2018       / Rust</springgreen>
-
-<grey>// --> Safer, more modern development</grey>
+  Created in:
+<crimson>- 2009</crimson> <grey>// Happy 10th birthday! ^_^)/</grey>
+<springgreen>+ 2018</springgreen> <grey>// v1 in Summer 2019?</grey>

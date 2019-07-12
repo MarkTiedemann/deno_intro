@@ -1,15 +1,12 @@
-<dodgerblue># Modules</dodgerblue>
+<dodgerblue># Promises</dodgerblue>
 
-- No `<lightgreen>require</lightgreen>` function.
-- ES modules work out of the box.
+- <u>Fun Fact</u>: Node adopted Promises in 2009,
+  but removed them in 2010
 
-<grey>// For example:</grey>
+- Deno's API's are built for <coral>asnyc/await</coral>,
+  for example:
 
-<grey>// in hello.ts</grey>
-<coral>export</coral> <coral>function</coral> <lightgreen>hello</lightgreen>(name: <lightblue>string</lightblue>) {
-    console.<lightgreen>log</lightgreen>(<khaki>`Hello, </khaki><coral>${</coral>name<coral>}</coral><khaki>!`</khaki>);
-}
+  <lightgreen>readFile</lightgreen>(name: <lightblue>string</lightblue>): Promise<<lightblue>Uint8Array</lightblue>>;
 
-<grey>// in world.ts</grey>
-<coral>import</coral> { hello } <coral>from</coral> <khaki>"./hello.ts"</khaki>;
-<lightgreen>hello</lightgreen>(<khaki>"World"</khaki>);
+<grey>// API Reference:</grey>
+<grey>// <a><href>https://deno.land/typedoc/index.html</href>deno.land/typedoc/index.html</a></grey>

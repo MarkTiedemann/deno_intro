@@ -9,8 +9,3 @@
   <tomato>ASSESS</tomato> > <i>"I wish you <u>could use</u> this tech."</i>
   <gold>TRIAL</gold>  > <i>"You <u>should try</u> this tech!"</i>
   <springgreen>ADOPT</springgreen>  > <i>"You <u>should use</u> this tech!"</i>
-
-- Deno currently ranked as <tomato>ASSESS</tomato>
-- Fun to use, but not "production ready"
-
-<grey>// PS: 36k ⭐'s on GitHub!</grey>

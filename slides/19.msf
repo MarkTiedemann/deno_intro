@@ -1,10 +1,13 @@
 <dodgerblue># Security</dodgerblue>
 
-<grey>// in examples/read_file.ts</grey>
+- V8 is already a secure sandbox
+- Node opens up the sandbox and lets
+  a program do whatever
+<lightgreen>+ Deno retains the secure sandbox via
+  permissions</lightgreen>
 
-<coral>async</coral> <coral>function</coral> <lightgreen>main</lightgreen>() {
-    <coral>await</coral> Deno.<lightgreen>readFile</lightgreen>(
-        <khaki>"~/.ssh/id_ed25519"</khaki>);
-}
-
-<lightgreen>main</lightgreen>();
+<grey>// For example:
+//  - Read and write files
+//  - Open sockets
+//  - Read environment variables
+//  - Run subprocesses</grey>

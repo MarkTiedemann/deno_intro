@@ -1,11 +1,6 @@
 <dodgerblue># Security</dodgerblue>
 
-- V8 is already a secure sandbox
-<lightgreen>+ Node opens up the sandbox and lets
-  a program do whatever</lightgreen>
+<lightgreen>+ V8 is already a secure sandbox</lightgreen>
 
-<grey>// Steal SSH keys, environment variables,
-// install a trojan, BitCoin miner, etc.
-
-// --> When using Node, as soon as you run
-//     code, it may take over your device...</grey>
+<grey>// Luckily, JS in the browser can't
+// make syscalls...</grey>

@@ -1,9 +1,0 @@
-<dodgerblue># Differences</dodgerblue>
-
-  Runtime for:
-<crimson>- JavaScript</crimson>
-<springgreen>+ JavaScript and TypeScript</springgreen>
-
-<grey>// - TS compiler is built-in!
-//   (No need to run `tsc`.)
-// - TS compilation AOT or JIT.</grey>

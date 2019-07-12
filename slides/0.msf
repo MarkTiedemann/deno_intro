@@ -1,7 +1,5 @@
-<dodgerblue># deno_intro</dodgerblue>
+Usage:
 
-\ Part I: From Node to Deno
-\ Part II: Intro to Deno
-
-<dodgerblue>></dodgerblue> Slides: <a><href>https://marksweb.site/deno_intro</href>marksweb.site/deno_intro</a>
-<dodgerblue>></dodgerblue> Source: <a><href>https://github.com/marktiedemann/deno_intro</href>github.com/marktiedemann/deno_intro</a>
+- Toggle Fullscreen: <deeppink>⇧</deeppink> + <deeppink>⌘</deeppink> + <deeppink>o</deeppink>
+- Next Slide: <deeppink><div><style>display:inline-block;transform:scaleY(0.6)translateY(5px)</style>▶</div></deeppink>
+- Previous Slide: <deeppink><div><style>display:inline-block;transform:scaleY(0.6)translateY(5px)</style>◀</div></deeppink>

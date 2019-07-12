@@ -94,12 +94,15 @@ function Main(index: number, slide: Slide) {
           .join("\n")
       : slide.content;
   return html`
-    <div class="slide" id="s${index}">${content}</div>
+    <div id="s${index}" style="display:none">${content}</div>
   `;
 }
 
 function Line(line: string) {
-  return replaceAnchors(replaceColors(replaceSpaces(line))) + "<br />";
+  return (
+    replaceInlineCSS(replaceAnchors(replaceColors(replaceSpaces(line)))) +
+    "<br />"
+  );
 }
 
 function replaceSpaces(line: string) {
@@ -113,10 +116,17 @@ function replaceAnchors(line: string) {
 function replaceColors(line: string) {
   for (let color of colors()) {
     line = line
-      .replace(new RegExp(`<${color}>`, "g"), `<span style="color: ${color};">`)
+      .replace(new RegExp(`<${color}>`, "g"), `<span style="color:${color}">`)
       .replace(new RegExp(`</${color}>`, "g"), "</span>");
   }
   return line;
+}
+
+function replaceInlineCSS(line: string) {
+  return line
+    .replace(/<span><style>/g, '<span style="')
+    .replace(/<div><style>/g, '<div style="')
+    .replace(/<\/style>/g, '">');
 }
 
 function colors() {

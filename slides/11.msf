@@ -1,10 +1,7 @@
-<dodgerblue># Trends</dodgerblue>
+<dodgerblue># Similarities</dodgerblue>
 
-> ThoughtWorks Technology Radar
-  ~ <a><href>https://www.thoughtworks.com/radar</href>thoughtworks.com/radar</a>
+  Created by:
+  <dodgerblue>Ryan Dahl</dodgerblue>
 
-<grey>/*
- * - Published every 6 months
- * - Shows current trends in tech
- * - Gives recommendations on adoption
- */</grey>
+  Engine:
+  <dodgerblue>V8</dodgerblue> <grey>// <-- Used in Chrome</grey>

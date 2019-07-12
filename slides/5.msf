@@ -4,10 +4,6 @@
 <crimson>- JavaScript</crimson>
 <springgreen>+ JavaScript and TypeScript</springgreen>
 
-  Main focus on:
-<crimson>-        evented I/O</crimson>
-<springgreen>+ secure evented I/O</springgreen>
-
-<grey>// - Focus on performance and security.
-// - Deno's I/O performance is close to
-//   Node's already.</grey>
+<grey>// - TS compiler is built-in!
+//   (No need to run `tsc`.)
+// - TS compilation AOT or JIT.</grey>
