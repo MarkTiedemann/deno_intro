@@ -1,0 +1,7 @@
+<dodgerblue># Security</dodgerblue>
+
+<khaki>$ deno examples/read_file.ts</khaki>
+
+<grey>  // ...</grey>
+
+<crimson>  error: Uncaught PermissionDenied</crimson>

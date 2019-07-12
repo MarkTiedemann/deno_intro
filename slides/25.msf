@@ -1,0 +1,12 @@
+<dodgerblue># Feature - Web Compatibility</dodgerblue>
+
+<i>"The subset of Deno programs which are</i>
+<i> written completely in JavaScript and do</i>
+<i> not use the global `Deno` namespace, ought</i>
+<i> to also be able to be run in a modern web</i>
+<i> browser without change."</i>
+<i>     -- Deno Manual</i>
+
+- Unlike in Node, `window` is defined.
+- For example, `<lightgreen>fetch</lightgreen>` just works!
+- Compatibility is WIP, see: <a><href>https://deno.dev/wpt</href>deno.dev/wpt</a>

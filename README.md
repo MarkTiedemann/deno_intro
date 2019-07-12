@@ -2,5 +2,5 @@
 
 **From Node to Deno.**
 
-- Slides: <a href="https://marksweb.site/deno_intro">marksweb.site/deno_intro</a>
-- Source: <a href="https://github.com/marktiedemann/deno_intro">github.com/marktiedemann/deno_intro</a>
+- Slides: [marksweb.site/deno_intro](https://marksweb.site/deno_intro)
+- Source: [github.com/marktiedemann/deno_intro](https://github.com/marktiedemann/deno_intro)

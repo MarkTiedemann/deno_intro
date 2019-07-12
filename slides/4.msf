@@ -1,0 +1,13 @@
+<dodgerblue># Differences</dodgerblue>
+
+  Runtime for:
+<crimson>- JavaScript</crimson>
+<springgreen>+ JavaScript and TypeScript</springgreen>
+
+  Main focus on:
+<crimson>-        evented I/O</crimson>
+<springgreen>+ secure evented I/O</springgreen>
+
+<grey>// - Focus on performance and security.</grey>
+<grey>// - Deno's I/O performance is close to</grey>
+<grey>//   Node's already.</grey>

@@ -1,0 +1,13 @@
+<dodgerblue># Differences</dodgerblue>
+
+  Runtime for:
+<crimson>- JavaScript</crimson>
+<springgreen>+ JavaScript and TypeScript</springgreen>
+
+  Main focus on:
+<crimson>-        evented I/O</crimson>
+<springgreen>+ secure evented I/O</springgreen>
+
+  Created in:
+<crimson>- 2009</crimson> <grey>// Happy 10th birthday! ^_^)/</grey>
+<springgreen>+ 2018</springgreen> <grey>// v1 in Summer 2019?</grey>

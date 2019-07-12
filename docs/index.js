@@ -1,3 +1,5 @@
+// TODO: Refactor and clean-up.
+
 document.addEventListener("DOMContentLoaded", () => {
   let lastSlide = window.lastSlide;
   let slideNumber = parseInt(location.hash.slice(1)) || 0;

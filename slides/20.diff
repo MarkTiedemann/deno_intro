@@ -1,7 +1,0 @@
-# # Security
-|
-$ deno examples/read_file.ts
-|
-/ // ...
-|
-- error: Uncaught PermissionDenied

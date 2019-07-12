@@ -1,0 +1,10 @@
+<dodgerblue># Security</dodgerblue>
+
+<grey>// in examples/read_file.ts</grey>
+
+<coral>async</coral> <coral>function</coral> <lightgreen>main</lightgreen>() {
+    <coral>await</coral> Deno.<lightgreen>readFile</lightgreen>(
+        <khaki>"~/.ssh/id_ed25519"</khaki>);
+}
+
+<lightgreen>main</lightgreen>();

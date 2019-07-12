@@ -1,6 +1,0 @@
-# # Security
-|
-+ - V8 is already a secure sandbox
-|
-/ // Luckily, JS in the browser can't
-/ // make syscalls...

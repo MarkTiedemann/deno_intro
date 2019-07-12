@@ -1,5 +1,0 @@
-# # Feature - Dev Tools
-|
-| - <span\wstyle="color:khaki">`deno fmt`</span>: Format code consistently
-| - <span\wstyle="color:khaki">`deno bundle`</span>: Bundle code as single file
-| - <span\wstyle="color:khaki">`deno info`</span>: Show module dependency tree
