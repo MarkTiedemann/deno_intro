@@ -6,7 +6,7 @@
 / // For example:
 |
 / // in hello.ts
-| <span\wstyle="color:coral">export</span> function <span\wstyle="color:lightgreen">hello</span>(name: <span\wstyle="color:lightblue">string</span>) {
+| <span\wstyle="color:coral">export</span> <span\wstyle="color:coral">function</span> <span\wstyle="color:lightgreen">hello</span>(name: <span\wstyle="color:lightblue">string</span>) {
 |     console.<span\wstyle="color:lightgreen">log</span>(<span\wstyle="color:khaki">`Hello, </span><span\wstyle="color:coral">${</span>name<span\wstyle="color:coral">}</span><span\wstyle="color:khaki">!`</span>);
 | }
 |
