@@ -7,16 +7,22 @@ const title = "deno_intro";
 main();
 
 async function main() {
-  let slides = await readSlides();
+  let slides = await loadSlides();
   if (areSlidesOrdered(slides)) {
-    await generateHtml(slides);
+    await createIndexHtml(slides);
   } else {
     await reorderSlides(slides);
-    await generateHtml(slides);
+    await createIndexHtml(slides);
   }
 }
 
-async function readSlides() {
+interface Slide {
+  number: number;
+  content: string;
+  type: ".msf" | ".html";
+}
+
+async function loadSlides() {
   let fileInfos = await Deno.readDir("slides");
   let filePaths = fileInfos.map(f => path.join("slides", f.name));
   let slideContents = await Promise.all(filePaths.map(f => fs.readFileStr(f)));
@@ -33,12 +39,6 @@ function slideNumber(fileInfo: Deno.FileInfo) {
   let extname = path.extname(fileInfo.name);
   let basename = path.basename(fileInfo.name, extname);
   return Number(basename);
-}
-
-interface Slide {
-  number: number;
-  content: string;
-  type: ".msf" | ".html";
 }
 
 function areSlidesOrdered(slides: Slide[]) {
@@ -62,12 +62,12 @@ function reorderSlides(slides: Slide[]) {
   );
 }
 
-function generateHtml(slides: Slide[]) {
+function createIndexHtml(slides: Slide[]) {
   let htmlPath = path.join("docs", "index.html");
-  return fs.writeFileStr(htmlPath, Document(slides));
+  return fs.writeFileStr(htmlPath, createDocument(slides));
 }
 
-function Document(slides: Slide[]) {
+function createDocument(slides: Slide[]) {
   return html`
     <!DOCTYPE html>
     <meta charset="utf-8" />
@@ -77,44 +77,43 @@ function Document(slides: Slide[]) {
     <script>
       window.lastSlide = ${slides.length - 1};
     </script>
-    ${Presentation(slides)}
+    ${createPresentation(slides)}
   `;
 }
 
-function Presentation(slides: Slide[]) {
-  return slides.map((s, i) => Main(i, s)).join("\n");
+function createPresentation(slides: Slide[]) {
+  return slides.map((s, i) => createSlide(i, s)).join("\n");
 }
 
-function Main(index: number, slide: Slide) {
-  let content =
-    slide.type === ".msf"
-      ? slide.content
-          .split("\n")
-          .map(Line)
-          .join("\n")
-      : slide.content;
+function createSlide(index: number, slide: Slide) {
+  let content = slide.content;
+  if (slide.type === ".msf") {
+    content = slide.content
+      .split("\n")
+      .map(replaceLine)
+      .map(line => line + "<br />")
+      .join("\n");
+  }
   return html`
     <div id="s${index}" style="display:none">${content}</div>
   `;
 }
 
-function Line(line: string) {
-  return (
-    replaceInlineCSS(replaceAnchors(replaceColors(replaceSpaces(line)))) +
-    "<br />"
-  );
-}
+function replaceLine(line: string) {
+  // Spaces
+  line = line.replace(/ /g, "&nbsp;");
 
-function replaceSpaces(line: string) {
-  return line.replace(/ /g, "&nbsp;");
-}
+  // Anchors
+  line = line.replace(/<a><href>/g, '<a href="').replace(/<\/href>/g, '">');
 
-function replaceAnchors(line: string) {
-  return line.replace(/<a><href>/g, '<a href="').replace(/<\/href>/g, '">');
-}
+  // Styles
+  line = line
+    .replace(/<span><style>/g, '<span style="')
+    .replace(/<div><style>/g, '<div style="')
+    .replace(/<\/style>/g, '">');
 
-function replaceColors(line: string) {
-  for (let color of colors()) {
+  // Colors
+  for (let color of getHtmlColors()) {
     line = line
       .replace(new RegExp(`<${color}>`, "g"), `<span style="color:${color}">`)
       .replace(new RegExp(`</${color}>`, "g"), "</span>");
@@ -122,14 +121,7 @@ function replaceColors(line: string) {
   return line;
 }
 
-function replaceInlineCSS(line: string) {
-  return line
-    .replace(/<span><style>/g, '<span style="')
-    .replace(/<div><style>/g, '<div style="')
-    .replace(/<\/style>/g, '">');
-}
-
-function colors() {
+function getHtmlColors() {
   return [
     "aliceblue",
     "antiquewhite",
