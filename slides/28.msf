@@ -1,5 +1,0 @@
-<dodgerblue># Dev Tools</dodgerblue>
-
-- <khaki>`deno fmt`</khaki>: Format code consistently
-- <khaki>`deno bundle`</khaki>: Bundle code as single file
-- <khaki>`deno info`</khaki>: Show module dependency tree

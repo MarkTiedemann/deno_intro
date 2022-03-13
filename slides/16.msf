@@ -1,6 +1,0 @@
-<dodgerblue># Security</dodgerblue>
-
-<lightgreen>+ V8 is already a secure sandbox</lightgreen>
-
-<grey>// Luckily, JS in the browser can't
-// make syscalls...</grey>
