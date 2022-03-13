@@ -3,13 +3,13 @@
 <title>deno_intro</title>
 <style>
 
-body { color: white; background: black; font-family: monospace; font-size: 4vh; height: 60vh; width: calc(100% - 40vh); margin: 20vh; overflow: hidden; }
+body { color: white; background: black; font-family: monospace; font-size: 3.5vh; height: 60vh; width: calc(100% - 40vh); margin: 20vh; overflow: hidden; }
 svg { position: absolute; bottom: calc(-45 * .15vh); right: calc(-34 * .12vh); height: calc(45 * .7vh); width: calc(34 * .7vh); }
 pre { margin: 0; white-space: pre-wrap; }
 pre:not([data-visible]) { display: none; }
 a {	color: dodgerblue; }
 
-.color-palette { color: deeppink crimson coral gold khaki lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
+.color-palette { color: deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
 
 </style>
 
@@ -22,6 +22,15 @@ Usage:
 
 <pre>
 <span style="color: dodgerblue"># deno_intro</span>
+
+> Agenda:
+
+  <span style="color: grey;"><i>0.</i> Pronunciation</span>
+  <span style="color: khaki;"><i>1.</i></span> Intro & History
+  <span style="color: khaki;"><i>2.</i></span> Deep Dive & Features
+  <span style="color: khaki;"><i>3.</i></span> Use-Cases
+  <span style="color: khaki;"><i>4.</i></span> Ecosystem 
+  <span style="color: khaki;"><i>5.</i></span> Open Source & Money
 
 > Slides: <a href="https://marksweb.site/deno_intro">marksweb.site/deno_intro</a>
 </pre>
@@ -37,6 +46,70 @@ Usage:
 
 <span style="color: crimson">- Den-no?</span>
 <span style="color: springgreen">+ Dee-no!</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Intro & History</span>
+
+Node is a runtime for:
+<span style="color: crimson">- JavaScript</span>
+
+Deno is a runtime for:
+<span style="color: springgreen">+ JavaScript and TypeScript</span>
+
+<span style="color: grey">// - WASM and WASI is supported, too.
+// - Node-API is replaced with a FFI.</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Intro & History</span>
+
+Node was created in:
+<span style="color: crimson">- 2009 (<time datetime="2009"></time>)</span>
+
+Deno was created in:
+<span style="color: springgreen">- 2018 (<time datetime="2018"></time>)</span>
+
+<span style="color: grey">// - Both were created by Ryan Dahl (<a href="https://github.com/ry">@ry</a>)
+// - Ryan left Node in 2012 because it was "finished"</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Intro & History</span>
+
+Node's initial goal:
+<span style="color: springgreen">+ Fast I/O in JavaScript</span>
+
+Deno's initial goal:
+<span style="color: springgreen">+ Fast I/O in JavaScript</span>
+  
+  <i>With <a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">"10 Things I Regret About Node"</a> improved:</i>
+
+<span style="color: springgreen">+ Tight security
++ Modern APIs
++ Web compatibility
++ TypeScript
++ Modern tooling
++ ...</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Intro & History</span>
+
+- <span style="color: lightgreen">Fast I/O</span>      : Should be at least as fast as Node, and it is!
+- <span style="color: lightgreen">Tight security</span>: Should be secure by default
+- <span style="color: lightgreen">Modern APIs</span>   : Should leverage Promises, TypedArrays, etc.
+- <span style="color: lightgreen">Web compat</span>    : Code written for the browser should "just work"
+- <span style="color: lightgreen">TypeScript</span>    : Should understand and run TypeScript
+- <span style="color: lightgreen">Modern tooling</span>: Should bring a bundler, linter, formatter, etc.
+
+=> Modern APIs and TypeScript didn't exist when Node was created
+=> Can't break Node (too successful)
+=> Instead, Ryan created a new, modern runtime
+=> <a href="https://www.reddit.com/r/programming/comments/p9ymrw/comment/ha2mcra/">"Rewrite from scratch"</a>, according to Reddit
+
+<span style="color: grey">// <i>In case you haven't noticed:</i>
+// Deno is Node spelled backwards 🙃</span>
 </pre>
 
 <pre>
@@ -63,6 +136,7 @@ Usage:
 # deno vs node
 	- but backwards
 	- healthy competition -> fetch collab
+	- node + deno = <3
 
 # good use-cases
 	- WebSocket server
@@ -78,6 +152,7 @@ Usage:
 	- CDNs (skypack.dev, esm.sh, jspm.io, etc.)
 
 # open source and money
+	- seed capital: https://deno.com/blog/the-deno-company
 	- Open Source .com(pany) -> deploy
 	- sponsor (2nd person)
 	- nest.land -> money for downloads?
@@ -91,7 +166,8 @@ Usage:
 
 <script>
 
-const slides = document.querySelectorAll("pre");
+let slides = document.querySelectorAll("pre");
+let l = slides.length - 1;
 let s = location.hash === "" ? 0 : parseInt(location.hash.slice(1));
 slides[s].dataset.visible = "";
 
@@ -107,8 +183,13 @@ addEventListener("hashchange", () =>
 	slide(parseInt(location.hash.slice(1))));
 
 addEventListener("keyup", ({ key }) => { switch (key) {
-	case "ArrowLeft": slide(s === 0 ? slides.length - 1 : s - 1); break;
-	case "ArrowRight": slide(s === slides.length - 1 ? 0 : s + 1); break;
+	case "ArrowLeft": slide(s === 0 ? l : s - 1); break;
+	case "ArrowRight": slide(s === l ? 0 : s + 1); break;
 }});
+
+let y = new Date().getFullYear();
+for (let t of document.querySelectorAll("time")) {
+	t.textContent = `${y - parseInt(t.dateTime)} years ago`;
+}
 
 </script>
