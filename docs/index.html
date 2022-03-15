@@ -18,6 +18,17 @@ Usage:
 
 - Next slide: <span style="color: deeppink">▶</span>
 - Previous slide: <span style="color: deeppink">◀</span>
+
+
+
+
+
+
+
+
+
+
+<span style="color: grey"><i>// This presentation is best viewed in 1080p</i></span>
 </pre>
 
 <pre>
@@ -83,7 +94,7 @@ Node's initial goal:
 Deno's initial goal:
 <span style="color: springgreen">+ Fast I/O in JavaScript</span>
   
-  <i>With <a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">"10 Things I Regret About Node"</a> improved:</i>
+  <i>Plus <a href="https://www.youtube.com/watch?v=M3BM9TB-8yA">"10 Things I Regret About Node"</a> improved:</i>
 
 <span style="color: springgreen">+ Tight security
 + Modern APIs
@@ -98,8 +109,8 @@ Deno's initial goal:
 
 - <span style="color: lightgreen">Fast I/O</span>      : Should be at least as fast as Node, and it is!
 - <span style="color: lightgreen">Tight security</span>: Should be secure by default
-- <span style="color: lightgreen">Modern APIs</span>   : Should leverage Promises, TypedArrays, etc.
 - <span style="color: lightgreen">Web compat</span>    : Code written for the browser should "just work"
+- <span style="color: lightgreen">Modern APIs</span>   : Should leverage Promises, TypedArrays, etc.
 - <span style="color: lightgreen">TypeScript</span>    : Should understand and run TypeScript
 - <span style="color: lightgreen">Modern tooling</span>: Should bring a bundler, linter, formatter, etc.
 
@@ -107,9 +118,90 @@ Deno's initial goal:
 => Can't break Node (too successful)
 => Instead, Ryan created a new, modern runtime
 => <a href="https://www.reddit.com/r/programming/comments/p9ymrw/comment/ha2mcra/">"Rewrite from scratch"</a>, according to Reddit
+</pre>
 
-<span style="color: grey">// <i>In case you haven't noticed:</i>
-// Deno is Node spelled backwards 🙃</span>
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Fast I/O</span>
+
+- Written in <a href="https://www.rust-lang.org/">Rust</a>                        <span style="color: grey">// instead of <a href="https://isocpp.org/">C++</a></span>
+- Uses <a href="https://v8.dev/">V8</a> for running JavaScript
+- Uses <a href="https://tokio.rs">Tokio</a> for async I/O <span style="color: grey">            // instead of <a href="https://libuv.org/">libuv</a></span>
+- Uses <a href="https://hyper.rs">hyper</a> for HTTP <span style="color: grey">                // instead of <a href="https://llhttp.org/">llhttp</a></span>
+- <a href="https://deno.land/benchmarks">Benchmarks</a> show it's faster than Node for most workloads
+
+<span style="color: grey">// When this talk was first written, <time datetime="2019"></time>,
+// Node was still faster...</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Tight security</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Web compat: URL imports</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Web compat: Web APIs</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Modern APIs</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> TypeScript</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Modern tooling</span>
+</pre>
+
+<pre style="margin-top: -12.5vh;">
+<span style="color: dodgerblue"># Use-Cases</span>
+
+- General-purpose scripting with type-safety
+  - <a href="https://deno.land/manual#philosophy">"Replacement for utility scripts that may have been</a>
+    <a href="https://deno.land/manual#philosophy">historically written with Bash or Python"</a>
+
+- Libraries that should work both on the server and on the
+  client without modification
+
+- Web-related server applications
+  - HTML rendering thanks to <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> support
+  - WebSocket servers thanks to <span style="color: lightskyblue">WebSocket</span> APIs
+  - As a <a href="https://workers.js.org/">Worker Environment</a> or replacement for serverless 
+    functions written in Node
+    <span style="color: grey">// Examples: <a href="https://deno.com/deploy">Deno Deploy</a>, <a href="https://denoflare.dev/">Denoflare</a></span>
+
+- Cross-platform CLI applications
+  - Bundle code into executable using <span style="color: khaki">`deno compile`</span>
+  - Use <span style="color: lightskyblue">localStorage</span> for storing data
+  - Use FFI for native functionality
+
+<span style="color: grey">// - Machine-learning using <span style="color: lightskyblue">WebGPU</span></span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Ecosystem</span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Open Source & Money</span>
 </pre>
 
 <pre>
@@ -117,10 +209,6 @@ Deno's initial goal:
 </pre>
 
 <!--
-
-# intro
-	- Ryan - left Node in 2012 because it was "finished" (fast IO)
-	- 10 Things I Regret About Node.js
 
 # features
 	# URL imports
@@ -148,8 +236,11 @@ Deno's initial goal:
 
 # ecosystem
 	- hard to tell
-	- okay interop
+	- definitely smaller, but can reuse existing code
 	- CDNs (skypack.dev, esm.sh, jspm.io, etc.)
+	- interop is okay
+	- not sure about quality
+	- don't trust deno.land/x
 
 # open source and money
 	- seed capital: https://deno.com/blog/the-deno-company
