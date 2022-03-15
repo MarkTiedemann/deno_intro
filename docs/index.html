@@ -258,12 +258,54 @@ Deno's initial goal:
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Web compat: URL imports</span>
+
+- Import modules from URLs - like a browser!
+- No NPM, no <span style="color: khaki">`node_modules`</span>, no <span style="color: khaki">`index.js`</span>.
+- Modules are cached locally. Can be reloaded.
+- Import maps are supported.
+- Standard library:
+
+  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightblue">log</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/
+                          std@0.129.0/log/mod.ts"</span>;
+
+- Registry with userland modules:
+
+  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightblue">pg</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/x/
+                         postgres@v0.15.0/mod.ts"</span>;
 </pre>
 
 <pre>
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Web compat: Web APIs</span>
+
+<i>"The subset of Deno programs which are
+ written completely in JavaScript and do
+ not use the global `<span style="color: lightblue">Deno</span>` namespace, ought
+ to also be able to be run in a modern web
+ browser without change."</i>
+     -- Deno Manual
+
+- Unlike in Node, `<span style="color: lightblue">window</span>` is defined.
+- `<span style="color: lightgreen">fetch</span>`, `<span style="color: lightblue">location</span>`, `<span style="color: lightblue">WebSocket</span>`, `<span style="color: lightblue">Blob</span>`, etc. just work!
+- Deno is run as part of the Web Platform Tests:
+    <a href="https://wpt.fyi/results/?product=deno">https://wpt.fyi/results/?product=deno</a>
+
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Deep-Dive & Features</span>
+
+<span style="color: lightgreen">> Web compat: Web APIs</span>
+
+
+<a href="https://deno.com/blog/deno-on-mdn">"Deno is on MDN"</a>
+
+For example:
+
+             | Chrome | Firefox | <span style="color: grey">...</span> | Deno |
+-------------|--------|---------|-----|------|
+localStorage | <span style="color: springgreen">4</span>      | <span style="color: springgreen">3.2</span>     | <span style="color: grey">...</span> | <span style="color: springgreen">1.16</span> |
 </pre>
 
 <pre>
