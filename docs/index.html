@@ -279,16 +279,15 @@ Deno's initial goal:
 
 <span style="color: lightgreen">> Web compat: Web APIs</span>
 
-<i>"The subset of Deno programs which are
- written completely in JavaScript and do
- not use the global `<span style="color: lightskyblue">Deno</span>` namespace, ought
- to also be able to be run in a modern web
- browser without change."</i>
-     -- Deno Manual
+<i>"The subset of Deno programs which are written completely
+ in JavaScript and do not use the global `<span style="color: lightskyblue">Deno</span>` namespace,
+ ought to also be able to be run in a modern web browser
+ without change."  <span style="color: grey">-- Deno Manual</span></i>
 
 - Unlike in Node, `<span style="color: lightskyblue">window</span>` is defined.
 - `<span style="color: lightgreen">fetch</span>`, `<span style="color: lightskyblue">location</span>`, `<span style="color: lightskyblue">WebSocket</span>`, `<span style="color: lightskyblue">Blob</span>`, etc. just work!
-- Deno is run as part of the Web Platform Tests:
+- Web compat is tested via the Web Platform Tests:
+
     <a href="https://wpt.fyi/results/?product=deno">https://wpt.fyi/results/?product=deno</a>
 
 </pre>
@@ -395,7 +394,7 @@ Deno provides useful tools as subcommands, e.g.:
 <span style="color: dodgerblue"># Ecosystem</span>
 
 - There is no centralized ecosystem
-  - Hard to judge size and quality of the ecosystem
+  - Hard to judge its size and quality
   - Since you can import from any URL, people do so
     - Self-hosted modules are not uncommon
   - Largest new registries are <a href="https://deno.land/x">deno.land/x</a> and <a href="https://nest.land/">nest.land</a>
