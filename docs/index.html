@@ -265,12 +265,12 @@ Deno's initial goal:
 - Import maps are supported.
 - Standard library:
 
-  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightblue">log</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/
+  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightskyblue">log</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/
                           std@0.129.0/log/mod.ts"</span>;
 
 - Registry with userland modules:
 
-  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightblue">pg</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/x/
+  <span style="color: orchid">import</span> * <span style="color: orchid">as</span> <span style="color: lightskyblue">pg</span> <span style="color: orchid">from</span> <span style="color: coral">"https://deno.land/x/
                          postgres@v0.15.0/mod.ts"</span>;
 </pre>
 
@@ -281,13 +281,13 @@ Deno's initial goal:
 
 <i>"The subset of Deno programs which are
  written completely in JavaScript and do
- not use the global `<span style="color: lightblue">Deno</span>` namespace, ought
+ not use the global `<span style="color: lightskyblue">Deno</span>` namespace, ought
  to also be able to be run in a modern web
  browser without change."</i>
      -- Deno Manual
 
-- Unlike in Node, `<span style="color: lightblue">window</span>` is defined.
-- `<span style="color: lightgreen">fetch</span>`, `<span style="color: lightblue">location</span>`, `<span style="color: lightblue">WebSocket</span>`, `<span style="color: lightblue">Blob</span>`, etc. just work!
+- Unlike in Node, `<span style="color: lightskyblue">window</span>` is defined.
+- `<span style="color: lightgreen">fetch</span>`, `<span style="color: lightskyblue">location</span>`, `<span style="color: lightskyblue">WebSocket</span>`, `<span style="color: lightskyblue">Blob</span>`, etc. just work!
 - Deno is run as part of the Web Platform Tests:
     <a href="https://wpt.fyi/results/?product=deno">https://wpt.fyi/results/?product=deno</a>
 
@@ -308,10 +308,28 @@ For example:
 localStorage | <span style="color: springgreen">4</span>      | <span style="color: springgreen">3.2</span>     | <span style="color: grey">...</span> | <span style="color: springgreen">1.16</span> |
 </pre>
 
-<pre>
+<pre style="margin-top: -12.5vh">
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Modern APIs</span>
+
+
+- TypedArrays (e.g. `<span style="color: lightskyblue">Uint8Array</span>`) instead of Node's `<span style="color: lightskyblue">Buffer</span>`
+
+- APIs use <span style="color: orchid">asnyc/await</span>, for example:
+
+    <span style="color: lightgreen">readFile</span>(name: <span style="color: lightskyblue">string</span>): Promise&lt;<span style="color: lightskyblue">Uint8Array</span>>;
+
+- Some APIs even use async iterators:
+
+    <span style="color: orchid">for await</span> (<span style="color: dodgerblue">const</span> conn <span style="color: dodgerblue">of</span> <span style="color: lightskyblue">Deno</span>.<span style="color: khaki">listen</span>({ port: <span style="color: lightgreen">8000</span> })) {
+        <span style="color: lightskyblue">console</span>.<span style="color: khaki">log</span>(conn.<span style="color: lightskyblue">remoteAddr</span>);
+        conn.<span style="color: khaki">close</span>();
+    }
+
+
+<span style="color: grey">/* Fun Fact: Node adopted Promises in 2009,
+   but removed them in 2010. */</span>
 </pre>
 
 <pre>
