@@ -69,7 +69,7 @@ Node is a runtime for:
 Deno is a runtime for:
 <span style="color: springgreen">+ JavaScript and TypeScript</span>
 
-<span style="color: grey">// - WASM and WASI is supported, too.
+<span style="color: grey">// - WASM and WASI are supported, too.
 // - Node-API is replaced with a FFI.</span>
 </pre>
 
@@ -127,7 +127,7 @@ Deno's initial goal:
 <span style="color: lightgreen">> Fast I/O</span>
 
 - Written in <a href="https://www.rust-lang.org/">Rust</a>                   <span style="color: grey">// instead of <a href="https://isocpp.org/">C++</a></span>
-- Uses <a href="https://v8.dev/">V8</a> for running JavaScript
+- Uses <a href="https://v8.dev/">V8</a> for running JavaScript   <span style="color: grey">// just like Node</span>
 - Uses <a href="https://tokio.rs">Tokio</a> for async I/O <span style="color: grey">       // instead of <a href="https://libuv.org/">libuv</a></span>
 - Uses <a href="https://hyper.rs">hyper</a> for HTTP <span style="color: grey">           // instead of <a href="https://llhttp.org/">llhttp</a></span>
 
@@ -262,7 +262,7 @@ Deno's initial goal:
 
 - Import modules from URLs - like a browser!
 - No NPM, no <span style="color: khaki">`node_modules`</span>, no <span style="color: khaki">`index.js`</span>.
-- Modules are cached locally. Can be reloaded.
+- Modules are cached locally. Can be reloaded. Can be locked.
 - Import maps are supported.
 - Standard library:
 
@@ -394,8 +394,8 @@ Deno provides useful tools as subcommands, e.g.:
    than they are with a Unix command-line prompt. More familiar
    with WebSockets than BSD sockets, MDN than man pages. (...)
    [S]cripts calling into WebAssembly code will be increasingly
-   common. Many developers, we think, prefer web-first
-   abstraction layers."</i> <span style="color: grey">--</span> <a href="https://deno.com/blog/the-deno-company"><span style="color: grey">Deno Blog Post</span></a>
+   common. <u>Many developers, we think, prefer web-first</u>
+   <u>abstraction layers</u>."</i> <span style="color: grey">--</span> <a href="https://deno.com/blog/the-deno-company"><span style="color: grey">Deno Blog Post</span></a>
 
 
 <span style="color: grey">// - Embedded use-cases, e.g., embedded scripting for databases
@@ -412,7 +412,8 @@ Deno provides useful tools as subcommands, e.g.:
     - Self-hosted modules are not uncommon
   - Largest new registries are <a href="https://deno.land/x">deno.land/x</a> and <a href="https://nest.land/">nest.land</a>
   - Open question: How to deal with security fixes?
-  - Modules tend to have less dependencies
+  - Modules tend to have only a small number of
+    or no dependencies
 
 - Existing code for the web can largely be reused
 
@@ -445,12 +446,18 @@ Deno provides useful tools as subcommands, e.g.:
 
 </pre>
 
-<pre>
+<pre class="large">
 <span style="color: dodgerblue"># Open Source & Money</span>
 
-- ~80k ⭐'s on GitHub, ~700 contributors, 142 sponsors
+<span style="color: lightgreen">> How can the people working on Deno be compensated?</span>
+
+- Early funding
+
+  - ~140 sponsors on GitHub <span style="color: grey">// ~80k ⭐'s, ~700 contributors</span>
+  - Sold <a href="http://web.archive.org/web/20200514042013/https://deno.land/v1/hoodie">100$ hoodies</a> to help support the project
 
 - <a href="https://deno.com/blog/the-deno-company">"Announcing the Deno Company"</a>
+
   - The new company has 10 employees
   - Raised 5 million dollars of seed capital
   - Investors include, among others, the Mozilla Corporation
@@ -458,9 +465,28 @@ Deno provides useful tools as subcommands, e.g.:
   <i>"Our business will build on the open source project,
    not attempt to monetize it directly."</i>
 
-- Possible sources of income are new, custom runtimes built
-  on top of Deno Core, for example, <a href="http://deno.com/deploy">Deno Deploy</a>, Electron-style
-  GUIs or embedded scripting for databases
+  - Possible sources of income are new, custom runtimes built
+    on top of Deno Core, for example, <a href="http://deno.com/deploy">Deno Deploy</a>, Electron-
+    style GUIs or embedded scripting for databases
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Open Source & Money</span>
+
+<span style="color: lightgreen">> How can the people working on the ecosystem be compensated?</span>
+
+- Possibly interesting attempt to monetize module usage
+  using a blockchain
+
+<span style="color: grey">// Disclaimer: I know nothing about blockchains or
+//             cryptocurrencies.</span>
+
+  - <a href="https://nest.land/">nest.land</a> is a registry for Deno built on <a href="https://www.arweave.org/">Arweave</a>
+  - Arweave is a blockchain for permanently storing data
+    ("permaweb")
+  - nest.land will soon offer <a href="https://nest.land/pst">Profit Sharing Tokens</a>
+  - These tokens "behave like a normal cryptocurrency"
+  - Module owners are <u>paid out based on module usage</u>
 </pre>
 
 <pre>
