@@ -8,6 +8,7 @@ svg { position: absolute; bottom: calc(-45 * .15vh); right: calc(-34 * .12vh); h
 pre { margin: 0; white-space: pre-wrap; }
 pre:not([data-visible]) { display: none; }
 a {	color: dodgerblue; }
+.large { margin-top: -12.5vh; }
 
 .color-palette { color: orchid deeppink crimson coral gold khaki grey lightgreen springgreen lightskyblue dodgerblue darkslateblue; }
 
@@ -230,7 +231,7 @@ Deno's initial goal:
     at file:///C:/dev/deno_intro/examples/definitely_not_evil.ts:1:43</span>
 </pre>
 
-<pre style="margin-top: -12.5vh;">
+<pre class="large">
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Tight security</span>
@@ -282,7 +283,7 @@ Deno's initial goal:
 <i>"The subset of Deno programs which are written completely
  in JavaScript and do not use the global `<span style="color: lightskyblue">Deno</span>` namespace,
  ought to also be able to be run in a modern web browser
- without change."  <span style="color: grey">-- Deno Manual</span></i>
+ without change." <span style="color: grey">-- Deno Manual</span></i>
 
 - Unlike in Node, `<span style="color: lightskyblue">window</span>` is defined.
 - `<span style="color: lightgreen">fetch</span>`, `<span style="color: lightskyblue">location</span>`, `<span style="color: lightskyblue">WebSocket</span>`, `<span style="color: lightskyblue">Blob</span>`, etc. just work!
@@ -307,7 +308,7 @@ For example:
 <span style="color: khaki">localStorage</span> | <span style="color: springgreen">4</span>      | <span style="color: springgreen">3.2</span>     | <span style="color: grey">...</span> | <span style="color: springgreen">1.16</span> |
 </pre>
 
-<pre style="margin-top: -12.5vh">
+<pre class="large">
 <span style="color: dodgerblue"># Deep-Dive & Features</span>
 
 <span style="color: lightgreen">> Modern APIs</span>
@@ -326,7 +327,6 @@ For example:
         conn.<span style="color: khaki">close</span>();
     }
 
-
 <span style="color: grey">/* Fun Fact: Node adopted Promises in 2009,
    but removed them in 2010. */</span>
 </pre>
@@ -337,8 +337,8 @@ For example:
 <span style="color: lightgreen">> TypeScript</span>
 
 
-<a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">"I'm convinced that TypeScript is essentially 
-like the next version of JavaScript"</a> -- Ryan
+<i><a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">"I'm convinced that TypeScript is essentially</a>
+ <a href="https://www.youtube.com/watch?v=z6JRlx5NC9E">like the next version of JavaScript"</a></i> <span style="color: grey">-- Ryan</span>
 
 - By default, Deno will run with strict mode enabled.
 - You can use `<span style="color: khaki">tsconfig.json</span>` for different settings.
@@ -365,7 +365,7 @@ Deno provides useful tools as subcommands, e.g.:
 - `<span style="color: khaki">deno vendor`</span>:  Vendoring dependencies
 </pre>
 
-<pre style="margin-top: -12.5vh;">
+<pre>
 <span style="color: dodgerblue"># Use-Cases</span>
 
 - General-purpose scripting with type-safety
@@ -381,25 +381,50 @@ Deno provides useful tools as subcommands, e.g.:
   - As a <a href="https://workers.js.org/">Worker Environment</a> or replacement for serverless 
     functions written in Node
     <span style="color: grey">// Examples: <a href="https://deno.com/deploy">Deno Deploy</a>, <a href="https://denoflare.dev/">Denoflare</a></span>
+</pre>
+
+<pre>
+<span style="color: dodgerblue"># Use-Cases</span>
 
 - Cross-platform CLI applications
-  - Create executable using <span style="color: khaki">`deno compile`</span>
-  - Use <span style="color: lightskyblue">localStorage</span> for storing data
+  - Can create bundled executable using <span style="color: khaki">`deno compile`</span>
   - Use FFI for native functionality
 
-<span style="color: grey">// - Machine-learning using <span style="color: lightskyblue">WebGPU</span></span>
+<i>  "Many [devs] are more familiar with the Chrome DevTools console
+   than they are with a Unix command-line prompt. More familiar
+   with WebSockets than BSD sockets, MDN than man pages. (...)
+   [S]cripts calling into WebAssembly code will be increasingly
+   common. Many developers, we think, prefer web-first
+   abstraction layers."</i> <span style="color: grey">--</span> <a href="https://deno.com/blog/the-deno-company"><span style="color: grey">Deno Blog Post</span></a>
+
+
+<span style="color: grey">// - Embedded use-cases, e.g., embedded scripting for databases
+// - Machine-learning using <span style="color: lightskyblue">WebGPU</span></span>
 </pre>
 
 <pre>
 <span style="color: dodgerblue"># Ecosystem</span>
 
 - There is no centralized ecosystem
+
   - Hard to judge its size and quality
   - Since you can import from any URL, people do so
     - Self-hosted modules are not uncommon
   - Largest new registries are <a href="https://deno.land/x">deno.land/x</a> and <a href="https://nest.land/">nest.land</a>
+  - Open question: How to deal with security fixes?
+  - Modules tend to have less dependencies
 
-- Existing code for the web or Node can largely be reused
+- Existing code for the web can largely be reused
+
+  - Some DOM APIs are missing
+  - Can use <a href="https://github.com/jsdom/jsdom">jsdom</a> or <a href="https://github.com/b-fuze/deno-dom">deno_dom</a> to fill gaps
+</pre>
+
+<pre class="large">
+<span style="color: dodgerblue"># Ecosystem</span>
+
+- Existing code for Node can largely be reused
+
   - CDNs like <a href="https://skypack.dev/">skypack.dev</a> and <a href="https://esm.sh/">esm.sh</a> provide optimized
     NPM packages without install, e.g.:
 
@@ -409,10 +434,33 @@ Deno provides useful tools as subcommands, e.g.:
   - `<span style="color: khaki">--compat</span>` flag enables an incomplete Node compat mode
   - `<span style="color: khaki">std/node</span>` provides some polyfills (e.g. for creating
     a `<span style="color: lightgreen">require</span>` function)
+  - Node-API can't be ported (must use WASM or FFI instead)
+
+- Deno code can be used in Node, too
+
+  - <a href="https://github.com/denoland/node_deno_shims">node_deno_shims</a> provide shims for `<span style="color: lightskyblue">Deno</span>` namespace
+    and other Web APIs
+  - <a href="https://github.com/denoland/dnt/">dnt</a> is a build tool for transforming Deno modules
+    into NPM packages
+
 </pre>
 
 <pre>
 <span style="color: dodgerblue"># Open Source & Money</span>
+
+- ~80k ⭐'s on GitHub, ~700 contributors, 142 sponsors
+
+- <a href="https://deno.com/blog/the-deno-company">"Announcing the Deno Company"</a>
+  - The new company has 10 employees
+  - Raised 5 million dollars of seed capital
+  - Investors include, among others, the Mozilla Corporation
+
+  <i>"Our business will build on the open source project,
+   not attempt to monetize it directly."</i>
+
+- Possible sources of income are new, custom runtimes built
+  on top of Deno Core, for example, <a href="http://deno.com/deploy">Deno Deploy</a>, Electron-style
+  GUIs or embedded scripting for databases
 </pre>
 
 <pre>
